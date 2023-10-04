@@ -12,11 +12,20 @@ typedef struct node {
 node* create_job() {
     int seed = time(NULL); // always use this seed
     srand(seed); // guarantee consistency when debugging
+    
     int arrival_time = rand() % 100; // will return num between 0 and 99
     int service_time = (rand() % 11); // will return num between 0 and 10
-    if (service_time = 0) service_time += 0.1; // service_time = 0.1 .. 10
-    int priority = rand() % 5;
-    if (priority = 0) priority += 1; // priority between 1 .. 4
+    // service time is an int, so you cannot change it to 0.1, for now, just treat it as such
+    
+    // if(service_time == 0) {
+    //     printf("1 \n");
+    //     service_time += 0.1; // service_time = 0.1 .. 10
+    //     printf("3 %d\n", service_time);
+    // }
+    int priority = rand() % 4 + 1; // more equal approach
+
+    // if (priority == 0) priority += 1; // priority between 1 .. 4
+    // unequal
 
     node *new_job = (node*) malloc(sizeof(node));
     new_job->arrival_time = arrival_time;
@@ -36,6 +45,6 @@ int main()
     int b = job->service_time;
     int c = job->priority;
 
-    printf("%d %d %d", a, b, c);
+    printf("%d %d %d \n", a, b, c);
 
 }
