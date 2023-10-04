@@ -2,49 +2,55 @@
 #include <stdlib.h>
 #include <time.h>
 
+// code for creating x amount of jobs using x seed
+// each job is stored as a node
+// all jobs are stored in an array
+
 typedef struct node {
     int arrival_time;
     int service_time;
     int priority;
-    struct node* next;
+    struct node* next_job;
 } node;
 
-node* create_job() {
-    int seed = time(NULL); // always use this seed
+void create_job(node* jobs[], int size, int seed) {
+    
+    seed = time(NULL); // always use this seed
     srand(seed); // guarantee consistency when debugging
+
+    for(int i = 0; i < size; i++) {
+        int arrival_time = rand() % 100; // will return num between 0 and 99
+        int service_time = (rand() % 10) + 1; // will return num between 1 and 10
+        int priority = rand() % 4 + 1; // will return num between 1 and 4
+
+        node *new_job = (node*) malloc(sizeof(node));
+        new_job->arrival_time = arrival_time;
+        new_job->service_time = service_time;
+        new_job->priority = priority;
+        new_job->next = NULL;
+        jobs[i] = new_job;
+    }
     
-    int arrival_time = rand() % 100; // will return num between 0 and 99
-    int service_time = (rand() % 11); // will return num between 0 and 10
-    // service time is an int, so you cannot change it to 0.1, for now, just treat it as such
-    
-    // if(service_time == 0) {
-    //     printf("1 \n");
-    //     service_time += 0.1; // service_time = 0.1 .. 10
-    //     printf("3 %d\n", service_time);
-    // }
-    int priority = rand() % 4 + 1; // more equal approach
-
-    // if (priority == 0) priority += 1; // priority between 1 .. 4
-    // unequal
-
-    node *new_job = (node*) malloc(sizeof(node));
-    new_job->arrival_time = arrival_time;
-    new_job->service_time = service_time;
-    new_job->priority = priority;
-    new_job->next = NULL;
-
-    return new_job;
 }
 
 int main()
 {
+    int size = 10;
+    node* jobs[size];
+    int seed = 42069;
+    // parameters: 
+    //     jobs = array to insert nodes into
+    //     size of array = 10
+    //     seed = 2, can be any integer
+    create_job(jobs, size, seed);
 
-    // call create job 10x
-    node* job = create_job();
-    int a = job->arrival_time;
-    int b = job->service_time;
-    int c = job->priority;
-
-    printf("%d %d %d \n", a, b, c);
+    // print out all values
+    for (int i; i < size; i ++) {
+        node* job = jobs[i];
+        int a = job->arrival_time;
+        int b = job->service_time;
+        int c = job->priority;
+        printf("%d %d %d \n", a, b, c);
+    }
 
 }
