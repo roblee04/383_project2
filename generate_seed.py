@@ -65,19 +65,19 @@ def find_seed(s):
     size = s
     jobs = [0] * size
     seed = int((time.time() % 1) * 1000000) # convert to better looking number
-    # print("seed is: " + str(seed))
+    # seed = time.time()
 
     create_job(jobs, size, seed)
-
-    # graph(jobs)
 
     arr = []
     for j in jobs:
         arr.append([j.arrival_time, j.arrival_time + j.service_time])
         
     # Function call
+    arr.append([0, 0]) # lower bound
+    arr.append([99, 99]) # upper bound
+
     intervals = findFreeinterval(arr, len(arr))
-    # print(intervals)
 
     # check if all intervals >= 2, not greater than 2
     valid = True
@@ -90,15 +90,15 @@ def find_seed(s):
         else:
             valid = valid and True
 
-    # print(valid)
-    return [valid, seed]
+    return [valid, seed, jobs]
         
 
 counter = 0
 while counter != 5:
-    valid, seed = find_seed(10)
+    valid, seed, jobs = find_seed(20)
 
     if valid:
         counter += 1
         print(seed)
+        # graph(jobs)
 
