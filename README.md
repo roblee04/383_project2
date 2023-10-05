@@ -1,7 +1,7 @@
 
 # 383_project2
 
-## Process Scheduling Algorithms
+# Process Scheduling Algorithms
 
 This assignment will give you experience with process scheduling algorithms.
 Write a Java or C program that performs runs of the following process scheduling algorithms:
@@ -18,7 +18,7 @@ Run each algorithm for 100 quanta (time slices), labeled 0 through 99. Before ea
 - A priority: integer 1, 2, 3, or 4 (1 is highest)
 
 
-Outputs for each algorithm run (total 30 runs)
+#Outputs for each algorithm run (total 30 runs)
 - Each created process’s name (such as A, B, C, ...), arrival time, expected run time, and priority. 
 - A time chart of the 100+ quanta, such as ABCDABCD ...
 
