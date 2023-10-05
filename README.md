@@ -2,8 +2,8 @@
 
 Process Scheduling Algorithms
 This assignment will give you experience with process scheduling algorithms.
-Write a Java or C program that performs runs of the following process scheduling
-algorithms:
+Write a Java or C program that performs runs of the following process scheduling algorithms:
+
 • First-come first-served (FCFS) [non-preemptive]
 • Shortest job first (SJF) [non-preemptive]
 • Shortest remaining time (SRT) [preemptive]
