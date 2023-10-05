@@ -1,10 +1,11 @@
 import random
 
 class job:
-    def __init__(self, arrival_time, service_time, priority):
+    def __init__(self, arrival_time, service_time, priority, id):
         self.arrival_time = arrival_time
         self.service_time = service_time
         self.priority = priority
+        self.id = id
         self.next = None # omit this if not using LL
 
 def create_job(jobs, size, seed):
@@ -16,7 +17,7 @@ def create_job(jobs, size, seed):
         service_time = random.randint(1, 10)
         priority = random.randint(1, 4)
 
-        new_job = job(arrival_time, service_time, priority)
+        new_job = job(arrival_time, service_time, priority, "P"+str(i))
         jobs[i] = new_job
 
 # parameters
@@ -28,5 +29,5 @@ create_job(jobs, size, seed)
 
 # print out all values
 for j in jobs:
-    print(j.arrival_time, j.service_time, j.priority)
+    print(j.arrival_time, j.service_time, j.priority, j.id)
 
