@@ -50,7 +50,7 @@ def graph(jobs):
 
         print(a)
     print()
-    
+
 
 def main():
     # parameters
@@ -64,6 +64,9 @@ def main():
 
     for j in jobs:
         print(j.id, j.arrival_time, j.service_time, j.priority)
+
+    #graph jobs
+    graph(jobs)
 
 # only execute main when you do python3 job.py
 if __name__ == '__main__':
