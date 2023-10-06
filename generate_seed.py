@@ -1,28 +1,7 @@
 import random
 import time
+from job import *
 
-class job:
-    def __init__(self, arrival_time, service_time, priority):
-        self.arrival_time = arrival_time
-        self.service_time = service_time
-        self.priority = priority
-        self.next = None # omit this if not using LL
-
-def create_job(jobs, size, seed):
-
-    random.seed(seed)
-
-    for i in range(size):
-        arrival_time = random.randint(0, 99)
-        service_time = random.randint(1, 10)
-        priority = random.randint(1, 4)
-
-        new_job = job(arrival_time, service_time, priority)
-        jobs[i] = new_job
-
-
-
-#
 # find a job seq so cpu not idle for more than 2 consecutive quanta
 def findFreeinterval(arr, N):
     if N < 1:
@@ -38,27 +17,6 @@ def findFreeinterval(arr, N):
     for i in P:
         a.append(i)
     return a
-
-def graph(jobs):
-    a = ""
-    for i in range(99):
-        if (i / 10) in range(10):
-            a += str(int((i / 10)))
-        else:
-            a += "-"
-
-    a += "end"
-
-    print(a, len(a))
-
-    for j in jobs:
-
-        a = ""
-        for i in range(j.arrival_time):
-            a += " "
-        for i in range(j.service_time):
-            a += "_"
-        print(a + "\n")
 
 # parameters
 def find_seed(s):
@@ -100,5 +58,5 @@ while counter != 5:
     if valid:
         counter += 1
         print(seed)
-        # graph(jobs)
+        graph(jobs)
 

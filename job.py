@@ -26,14 +26,45 @@ def create_job(jobs, size, seed):
         new_job = job(id, arrival_time, service_time, priority)
         jobs[i] = new_job
 
-# parameters
-size = 10
-jobs = [0] * size
-seed = 42069
+# graphs your jobs / schedule, only accepts array
+def graph(jobs):
+    a = "pid| prio|"
+    for i in range(99):
+        if (i / 10) in range(10):
+            a += str(int((i / 10)))
+        else:
+            a += "-"
 
-create_job(jobs, size, seed)
+    a += "end"
 
-# print out all values
-for j in jobs:
-    print(j.id, j.arrival_time, j.service_time, j.priority)
+    print(a, len(a) - 13)
 
+    for j in jobs:
+
+        a = ""
+        a += j.id + "  |  " + str(j.priority) + "  |"
+        for i in range(j.arrival_time):
+            a += " "
+        for i in range(j.service_time):
+            a += "_"
+
+        print(a)
+    print()
+    
+
+def main():
+    # parameters
+    size = 20
+    jobs = [0] * size
+    seed = 42069 
+
+    create_job(jobs, size, seed)
+
+    # print out all values
+
+    for j in jobs:
+        print(j.id, j.arrival_time, j.service_time, j.priority)
+
+# only execute main when you do python3 job.py
+if __name__ == '__main__':
+  main()

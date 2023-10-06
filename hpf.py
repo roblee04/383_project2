@@ -1,51 +1,6 @@
 import random
-
-class job:
-    def __init__(self, arrival_time, service_time, priority):
-        self.arrival_time = arrival_time
-        self.service_time = service_time
-        self.priority = priority
-        self.next = None # omit this if not using LL
-
-def create_job(jobs, size, seed):
-
-    random.seed(seed)
-
-    for i in range(size):
-        arrival_time = random.randint(0, 99)
-        service_time = random.randint(1, 10)
-        priority = random.randint(1, 4)
-
-        new_job = job(arrival_time, service_time, priority)
-        jobs[i] = new_job
-
-def graph(jobs):
-    a = ""
-    for i in range(99):
-        if (i / 10) in range(10):
-            a += str(int((i / 10)))
-        else:
-            a += "-"
-
-    a += "end"
-
-    print(a, len(a))
-
-    for j in jobs:
-
-        a = ""
-        for i in range(j.arrival_time):
-            a += " "
-        for i in range(j.service_time):
-            a += "_"
-        print(a + "\n")
-
-# parameters
-# size = 10
-# jobs = [0] * size
-# seed = 675824
-
-# create_job(jobs, size, seed)
+import operator
+from job import *
 
 # print out all values
 # for j in jobs:
@@ -63,14 +18,53 @@ def graph(jobs):
 # 292160
 # 803931
 
-l = [139342, 761639, 567317, 292160, 803931]
+seeds = [139342, 761639, 567317, 292160, 803931]
 
-for s in l:
-    size = 20
-    jobs = [0] * size
-    seed = s
+# for s in seeds:
+#     size = 20
+#     jobs = [0] * size
+#     seed = s
 
-    create_job(jobs, size, seed)
-    graph(jobs)
+#     create_job(jobs, size, seed)
+#     graph(jobs)
+
+# # non-preemptive highest priority first, we get to look into the future
+
+def hpf(jobs):
+    # sort jobs into their priorities, and order 
+    p1 = []
+    p2 = []
+    p3 = []
+    p4 = []
+
+    for j in jobs:
+        prio = j.priority
+
+        if prio == 1:
+            p1.append(j)
+        elif prio == 2:
+            p2.append(j)
+        elif prio == 3:
+            p3.append(j)
+        else:
+            p4.append(j)
+    
+    # jobs all in their priority queues, now sort by arrival time
+    p1.sort(key=lambda x: x.arrival_time)
+    p2.sort(key=lambda x: x.arrival_time)
+    p3.sort(key=lambda x: x.arrival_time)
+    p4.sort(key=lambda x: x.arrival_time)
+
+    # need to fill in the gaps. with runtime
+    new_jobs = p1 + p2 + p3 + p4
+    return new_jobs
+    
 
 
+size = 20
+jobs = [0] * size
+seed = 139342
+
+create_job(jobs, size, seed)
+jobs = hpf(jobs)
+graph(jobs)
