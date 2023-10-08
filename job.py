@@ -7,6 +7,7 @@ class job:
         self.service_time = service_time
         self.priority = priority
         self.age = 0    # needed for aging
+        self.og_prio = priority # convenient for hpf
         self.time_on_cpu = 0 # needed for preemptive hpf
         self.start = 0 # convenient to use to keep track of multiple start end times in preemptive hpf
         self.end = 0

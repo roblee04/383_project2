@@ -121,7 +121,7 @@ def hpf(jobs, lst, aging_threshold): # 1 is the highest priority
             # print out scheduled time and est end time
             start = time
             end = time + curr_job.service_time
-            lst.append([id, curr_job.priority, start, end, curr_job.arrival_time, curr_job.service_time])
+            lst.append([id, curr_job.og_prio, start, end, curr_job.arrival_time, curr_job.service_time])
 
         # increment time 
         time += 1
@@ -136,7 +136,7 @@ def hpf(jobs, lst, aging_threshold): # 1 is the highest priority
             if j.age >= aging_threshold and j.priority > 1:
                 j.priority -= 1
                 j.age = 0
-                print(f"Job {j.id} priority boosted to {j.priority}")
+                # print(f"Job {j.id} priority boosted to {j.priority}")
     
     return job_order
 

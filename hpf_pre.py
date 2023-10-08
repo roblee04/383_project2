@@ -13,7 +13,7 @@ def output(lst):
         b += "   " + j.id + " |"
         b += "   " + str(j.start) + " |"
         b += "   " + str(j.end) + " |"
-        b += "   " + str(j.priority) + " |"
+        b += "   " + str(j.og_prio) + " |"
         
         print(b)  
     print("total jobs: " + str(len(lst)))
@@ -29,11 +29,11 @@ def output(lst):
         # lst element: [id, prio, start, end, arrival_time, service time]
         
         # Average turnaround time, Turnaround Time = Completion Time – Arrival Time
-        tat = j.end - j.start
+        tat = j.end - j.arrival_time
         # Average waiting time, Waiting Time = TAT - Service Time
         wait = tat - j.service_time
         # Average response time, Response Time = Run Time – Arrival Time
-        res = j.end - j.arrival_time
+        res = j.start - j.arrival_time
 
         tot_tat += tat
         tot_wait += wait
@@ -156,9 +156,11 @@ def hpf(jobs, aging_threshold): # 1 is the highest priority
                 j.age += 1 
                 if j.age >= aging_threshold:
                     j.priority = 1
+                    # insert j into priority q based on arrival time
                     p1.append(j)
+                    p1.sort(key=lambda x: x.arrival_time)
                     p2.remove(j)
-                    print(f"Job {j.id} priority boosted to {j.priority}")
+                    # print(f"Job {j.id} priority boosted to {j.priority}")
         for j in p3:
             if j != curr_job:
                 j.age += 1 
@@ -166,8 +168,9 @@ def hpf(jobs, aging_threshold): # 1 is the highest priority
                     j.priority -= 1
                     j.age = 0
                     p2.append(j)
+                    p2.sort(key=lambda x: x.arrival_time)
                     p3.remove(j)
-                    print(f"Job {j.id} priority boosted to {j.priority}")
+                    # print(f"Job {j.id} priority boosted to {j.priority}")
         for j in p4:
             if j != curr_job:
                 j.age += 1 
@@ -175,8 +178,9 @@ def hpf(jobs, aging_threshold): # 1 is the highest priority
                     j.priority -= 1
                     j.age = 0
                     p3.append(j)
+                    p3.sort(key=lambda x: x.arrival_time)
                     p4.remove(j)
-                    print(f"Job {j.id} priority boosted to {j.priority}")
+                    # print(f"Job {j.id} priority boosted to {j.priority}")
 
     print("TIMECHART: \n" + tc + "\n")
 
