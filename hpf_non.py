@@ -102,23 +102,18 @@ def hpf(jobs, lst): # 4 is the highest priority
     num_jobs = len(jobs)
     while working_q or num_jobs > 0:
         # add jobs to the working q who have arrived at time slice x
-        # print("working!")
         
         for j in jobs:  # pretty sure there is a problem if removing more than 2 jobs
             if j.arrival_time == time:
-                # print("added job")
                 working_q.append(j)
                 num_jobs -= 1
-                # maybe something going wrong here? removing while iterating?
         
         # on each iteration, sort working queue by priority
         working_q.sort(key=lambda x: x.priority, reverse = True)
-        # print(jobs)
-        # this may starve other processes, can implement aging
+        # this may starve other processes, can implement aging here
 
         # # put a new job to work
         if time_left == 0 and working_q:
-            # print("popped")
             curr_job = working_q.pop(0)
             id = curr_job.id
             time_left += curr_job.service_time
@@ -140,6 +135,7 @@ def hpf(jobs, lst): # 4 is the highest priority
 
 seeds = [139342, 761639, 567317, 292160, 803931]
 
+# iterate on all seeds
 for s in seeds:
     size = 20
     jobs = [0] * size
@@ -147,7 +143,7 @@ for s in seeds:
 
     create_job(jobs, size, seed)
     
-    startend = [] #
+    startend = [] # startend, is a list used to help calculate all the outputs
     jobs = hpf(jobs, startend)
     print()
     print("SEED: " + str(seed))
@@ -155,17 +151,6 @@ for s in seeds:
 
     print("_________________________________________________")
 
-
-# size = 20
-# jobs = [0] * size
-# seed = 761639
-
-# create_job(jobs, size, seed)
-# graph(jobs)
-
-# startend = [] #
-# jobs = hpf(jobs, startend)
-# output(startend)
 
 
 
