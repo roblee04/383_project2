@@ -1,0 +1,1767 @@
+pid| prio|0---------1---------2---------3---------4---------5---------6---------7---------8---------9--------end 99
+A  |  1  |                                 _____
+B  |  1  |  __________
+C  |  1  |                                           _____
+D  |  3  |                                                              _____
+E  |  2  |          _______
+F  |  4  |                                                                                                 ___
+G  |  3  |                           _________
+H  |  3  |                                                                                             ____
+I  |  4  |                _________
+J  |  2  |                                             ______
+K  |  3  |                                                                                              ____
+L  |  1  |                                                                        __________
+M  |  2  |                                   ___
+N  |  3  |                                                                                  _________
+O  |  3  |                                                     _______
+P  |  2  |        _________
+Q  |  1  |            ____
+R  |  2  |                                                                                      ______
+S  |  4  |                                     _____
+T  |  3  |                                                                ______
+
+ID: A, Arrival Time: 33, Service Time: 5, Priority: 1
+ID: B, Arrival Time: 2, Service Time: 10, Priority: 1
+ID: C, Arrival Time: 43, Service Time: 5, Priority: 1
+ID: D, Arrival Time: 62, Service Time: 5, Priority: 3
+ID: E, Arrival Time: 10, Service Time: 7, Priority: 2
+ID: F, Arrival Time: 97, Service Time: 3, Priority: 4
+ID: G, Arrival Time: 27, Service Time: 9, Priority: 3
+ID: H, Arrival Time: 93, Service Time: 4, Priority: 3
+ID: I, Arrival Time: 16, Service Time: 9, Priority: 4
+ID: J, Arrival Time: 45, Service Time: 6, Priority: 2
+ID: K, Arrival Time: 94, Service Time: 4, Priority: 3
+ID: L, Arrival Time: 72, Service Time: 10, Priority: 1
+ID: M, Arrival Time: 35, Service Time: 3, Priority: 2
+ID: N, Arrival Time: 82, Service Time: 9, Priority: 3
+ID: O, Arrival Time: 53, Service Time: 7, Priority: 3
+ID: P, Arrival Time: 8, Service Time: 9, Priority: 2
+ID: Q, Arrival Time: 12, Service Time: 4, Priority: 1
+ID: R, Arrival Time: 86, Service Time: 6, Priority: 2
+ID: S, Arrival Time: 37, Service Time: 5, Priority: 4
+ID: T, Arrival Time: 64, Service Time: 6, Priority: 3
+Simulation Start:
+Time: 0
+Time: 1
+Time: 2
+Job B arrived at 2
+Job B worked for 1
+Time: 3
+Job B worked for 1
+Time: 4
+Job B worked for 1
+Time: 5
+Job B worked for 1
+Time: 6
+Job B worked for 1
+Time: 7
+Job B worked for 1
+Time: 8
+Job P arrived at 8
+Job B worked for 1
+Time: 9
+Job P worked for 1
+Time: 10
+Job E arrived at 10
+Job B worked for 1
+Time: 11
+Job P worked for 1
+Time: 12
+Job Q arrived at 12
+Job E worked for 1
+Time: 13
+Job B worked for 1
+Time: 14
+Job P worked for 1
+Time: 15
+Job Q worked for 1
+Time: 16
+Job I arrived at 16
+Job E worked for 1
+Time: 17
+Job B completed!
+Time: 18
+Job P worked for 1
+Time: 19
+Job Q worked for 1
+Time: 20
+Job I worked for 1
+Time: 21
+Job E worked for 1
+Time: 22
+Job P worked for 1
+Time: 23
+Job Q worked for 1
+Time: 24
+Job I worked for 1
+Time: 25
+Job E worked for 1
+Time: 26
+Job P worked for 1
+Time: 27
+Job G arrived at 27
+Job Q completed!
+Time: 28
+Job I worked for 1
+Time: 29
+Job E worked for 1
+Time: 30
+Job P worked for 1
+Time: 31
+Job G worked for 1
+Time: 32
+Job I worked for 1
+Time: 33
+Job A arrived at 33
+Job E worked for 1
+Time: 34
+Job P worked for 1
+Time: 35
+Job M arrived at 35
+Job G worked for 1
+Time: 36
+Job I worked for 1
+Time: 37
+Job S arrived at 37
+Job A worked for 1
+Time: 38
+Job E completed!
+Time: 39
+Job P completed!
+Time: 40
+Job M worked for 1
+Time: 41
+Job G worked for 1
+Time: 42
+Job I worked for 1
+Time: 43
+Job C arrived at 43
+Job S worked for 1
+Time: 44
+Job A worked for 1
+Time: 45
+Job J arrived at 45
+Job M worked for 1
+Time: 46
+Job G worked for 1
+Time: 47
+Job I worked for 1
+Time: 48
+Job C worked for 1
+Time: 49
+Job S worked for 1
+Time: 50
+Job A worked for 1
+Time: 51
+Job J worked for 1
+Time: 52
+Job M completed!
+Time: 53
+Job O arrived at 53
+Job G worked for 1
+Time: 54
+Job I worked for 1
+Time: 55
+Job C worked for 1
+Time: 56
+Job S worked for 1
+Time: 57
+Job A worked for 1
+Time: 58
+Job J worked for 1
+Time: 59
+Job O worked for 1
+Time: 60
+Job G worked for 1
+Time: 61
+Job I completed!
+Time: 62
+Job D arrived at 62
+Job C worked for 1
+Time: 63
+Job S worked for 1
+Time: 64
+Job T arrived at 64
+Job A completed!
+Time: 65
+Job J worked for 1
+Time: 66
+Job O worked for 1
+Time: 67
+Job G worked for 1
+Time: 68
+Job D worked for 1
+Time: 69
+Job C worked for 1
+Time: 70
+Job S completed!
+Time: 71
+Job T worked for 1
+Time: 72
+Job L arrived at 72
+Job J worked for 1
+Time: 73
+Job O worked for 1
+Time: 74
+Job G worked for 1
+Time: 75
+Job D worked for 1
+Time: 76
+Job C completed!
+Time: 77
+Job T worked for 1
+Time: 78
+Job L worked for 1
+Time: 79
+Job J worked for 1
+Time: 80
+Job O worked for 1
+Time: 81
+Job G completed!
+Time: 82
+Job N arrived at 82
+Job D worked for 1
+Time: 83
+Job T worked for 1
+Time: 84
+Job L worked for 1
+Time: 85
+Job J completed!
+Time: 86
+Job R arrived at 86
+Job O worked for 1
+Time: 87
+Job N worked for 1
+Time: 88
+Job D worked for 1
+Time: 89
+Job T worked for 1
+Time: 90
+Job L worked for 1
+Time: 91
+Job R worked for 1
+Time: 92
+Job O worked for 1
+Time: 93
+Job H arrived at 93
+Job N worked for 1
+Time: 94
+Job K arrived at 94
+Job D completed!
+Time: 95
+Job T worked for 1
+Time: 96
+Job L worked for 1
+Time: 97
+Job F arrived at 97
+Job R worked for 1
+Time: 98
+Job O completed!
+Time: 99
+Job H worked for 1
+Time: 100
+Job N worked for 1
+Time: 101
+Job K worked for 1
+Time: 102
+Job T completed!
+Time: 103
+Job L worked for 1
+Time: 104
+Job F worked for 1
+Time: 105
+Job R worked for 1
+Time: 106
+Job H worked for 1
+Time: 107
+Job N worked for 1
+Time: 108
+Job K worked for 1
+Time: 109
+Job L worked for 1
+Time: 110
+Job F worked for 1
+Time: 111
+Job R worked for 1
+Time: 112
+Job H worked for 1
+Time: 113
+Job N worked for 1
+Time: 114
+Job K worked for 1
+Time: 115
+Job L worked for 1
+Time: 116
+Job F completed!
+Time: 117
+Job R worked for 1
+Time: 118
+Job H completed!
+Time: 119
+Job N worked for 1
+Time: 120
+Job K completed!
+Time: 121
+Job L worked for 1
+Time: 122
+Job R completed!
+Time: 123
+Job N worked for 1
+Time: 124
+Job L worked for 1
+Time: 125
+Job N worked for 1
+Time: 126
+Job L completed!
+Time: 127
+Job N completed!
+Job B completed at time 18
+Job Q completed at time 28
+Job E completed at time 39
+Job P completed at time 40
+Job M completed at time 53
+Job I completed at time 62
+Job A completed at time 65
+Job S completed at time 71
+Job C completed at time 77
+Job G completed at time 82
+Job J completed at time 86
+Job D completed at time 95
+Job O completed at time 99
+Job T completed at time 103
+Job F completed at time 117
+Job H completed at time 119
+Job K completed at time 121
+Job R completed at time 123
+Job L completed at time 127
+Job N completed at time 128
+Number of jobs = 20
+Average Turnaround Time: 34.10
+Average Response Time: 4.75
+Average Wait Time: 27.80
+Throughput: 0.16 jobs per quantum
+
+pid| prio|0---------1---------2---------3---------4---------5---------6---------7---------8---------9--------end 99
+A  |  2  |                                          ________
+B  |  2  |       _____
+C  |  2  |                                                          __________
+D  |  2  |                                                                                        ______
+E  |  4  |                                  ________
+F  |  3  |               ___
+G  |  1  |                                         __________
+H  |  2  |  _____
+I  |  3  |                                                                                               _______
+J  |  1  |                                                                             __________
+K  |  2  |                                                                                               ________
+L  |  3  |                                                                                              ___
+M  |  3  |           _______
+N  |  4  |  _________
+O  |  2  |                                                                   __________
+P  |  4  |                  _________
+Q  |  2  |                                                          _________
+R  |  2  |                                                 __
+S  |  1  |                          _________
+T  |  2  |                                                     _________
+
+ID: A, Arrival Time: 42, Service Time: 8, Priority: 2
+ID: B, Arrival Time: 7, Service Time: 5, Priority: 2
+ID: C, Arrival Time: 58, Service Time: 10, Priority: 2
+ID: D, Arrival Time: 88, Service Time: 6, Priority: 2
+ID: E, Arrival Time: 34, Service Time: 8, Priority: 4
+ID: F, Arrival Time: 15, Service Time: 3, Priority: 3
+ID: G, Arrival Time: 41, Service Time: 10, Priority: 1
+ID: H, Arrival Time: 2, Service Time: 5, Priority: 2
+ID: I, Arrival Time: 95, Service Time: 7, Priority: 3
+ID: J, Arrival Time: 77, Service Time: 10, Priority: 1
+ID: K, Arrival Time: 95, Service Time: 8, Priority: 2
+ID: L, Arrival Time: 94, Service Time: 3, Priority: 3
+ID: M, Arrival Time: 11, Service Time: 7, Priority: 3
+ID: N, Arrival Time: 2, Service Time: 9, Priority: 4
+ID: O, Arrival Time: 67, Service Time: 10, Priority: 2
+ID: P, Arrival Time: 18, Service Time: 9, Priority: 4
+ID: Q, Arrival Time: 58, Service Time: 9, Priority: 2
+ID: R, Arrival Time: 49, Service Time: 2, Priority: 2
+ID: S, Arrival Time: 26, Service Time: 9, Priority: 1
+ID: T, Arrival Time: 53, Service Time: 9, Priority: 2
+Simulation Start:
+Time: 0
+Time: 1
+Time: 2
+Job H arrived at 2
+Job N arrived at 2
+Job H worked for 1
+Time: 3
+Job N worked for 1
+Time: 4
+Job H worked for 1
+Time: 5
+Job N worked for 1
+Time: 6
+Job H worked for 1
+Time: 7
+Job B arrived at 7
+Job N worked for 1
+Time: 8
+Job H worked for 1
+Time: 9
+Job B worked for 1
+Time: 10
+Job N worked for 1
+Time: 11
+Job M arrived at 11
+Job H completed!
+Time: 12
+Job B worked for 1
+Time: 13
+Job N worked for 1
+Time: 14
+Job M worked for 1
+Time: 15
+Job F arrived at 15
+Job B worked for 1
+Time: 16
+Job N worked for 1
+Time: 17
+Job M worked for 1
+Time: 18
+Job P arrived at 18
+Job F worked for 1
+Time: 19
+Job B worked for 1
+Time: 20
+Job N worked for 1
+Time: 21
+Job M worked for 1
+Time: 22
+Job P worked for 1
+Time: 23
+Job F worked for 1
+Time: 24
+Job B completed!
+Time: 25
+Job N worked for 1
+Time: 26
+Job S arrived at 26
+Job M worked for 1
+Time: 27
+Job P worked for 1
+Time: 28
+Job F completed!
+Time: 29
+Job N completed!
+Time: 30
+Job S worked for 1
+Time: 31
+Job M worked for 1
+Time: 32
+Job P worked for 1
+Time: 33
+Job S worked for 1
+Time: 34
+Job E arrived at 34
+Job M worked for 1
+Time: 35
+Job P worked for 1
+Time: 36
+Job S worked for 1
+Time: 37
+Job E worked for 1
+Time: 38
+Job M completed!
+Time: 39
+Job P worked for 1
+Time: 40
+Job S worked for 1
+Time: 41
+Job G arrived at 41
+Job E worked for 1
+Time: 42
+Job A arrived at 42
+Job P worked for 1
+Time: 43
+Job S worked for 1
+Time: 44
+Job G worked for 1
+Time: 45
+Job E worked for 1
+Time: 46
+Job A worked for 1
+Time: 47
+Job P worked for 1
+Time: 48
+Job S worked for 1
+Time: 49
+Job R arrived at 49
+Job G worked for 1
+Time: 50
+Job E worked for 1
+Time: 51
+Job A worked for 1
+Time: 52
+Job P worked for 1
+Time: 53
+Job T arrived at 53
+Job S worked for 1
+Time: 54
+Job R worked for 1
+Time: 55
+Job G worked for 1
+Time: 56
+Job E worked for 1
+Time: 57
+Job A worked for 1
+Time: 58
+Job C arrived at 58
+Job Q arrived at 58
+Job P completed!
+Time: 59
+Job T worked for 1
+Time: 60
+Job S worked for 1
+Time: 61
+Job R completed!
+Time: 62
+Job G worked for 1
+Time: 63
+Job E worked for 1
+Time: 64
+Job A worked for 1
+Time: 65
+Job C worked for 1
+Time: 66
+Job Q worked for 1
+Time: 67
+Job O arrived at 67
+Job T worked for 1
+Time: 68
+Job S completed!
+Time: 69
+Job G worked for 1
+Time: 70
+Job E worked for 1
+Time: 71
+Job A worked for 1
+Time: 72
+Job C worked for 1
+Time: 73
+Job Q worked for 1
+Time: 74
+Job O worked for 1
+Time: 75
+Job T worked for 1
+Time: 76
+Job G worked for 1
+Time: 77
+Job J arrived at 77
+Job E completed!
+Time: 78
+Job A worked for 1
+Time: 79
+Job C worked for 1
+Time: 80
+Job Q worked for 1
+Time: 81
+Job O worked for 1
+Time: 82
+Job T worked for 1
+Time: 83
+Job G worked for 1
+Time: 84
+Job J worked for 1
+Time: 85
+Job A worked for 1
+Time: 86
+Job C worked for 1
+Time: 87
+Job Q worked for 1
+Time: 88
+Job D arrived at 88
+Job O worked for 1
+Time: 89
+Job T worked for 1
+Time: 90
+Job G worked for 1
+Time: 91
+Job J worked for 1
+Time: 92
+Job A completed!
+Time: 93
+Job C worked for 1
+Time: 94
+Job L arrived at 94
+Job Q worked for 1
+Time: 95
+Job I arrived at 95
+Job K arrived at 95
+Job D worked for 1
+Time: 96
+Job O worked for 1
+Time: 97
+Job T worked for 1
+Time: 98
+Job G worked for 1
+Time: 99
+Job J worked for 1
+Time: 100
+Job C worked for 1
+Time: 101
+Job L worked for 1
+Time: 102
+Job Q worked for 1
+Time: 103
+Job I worked for 1
+Time: 104
+Job K worked for 1
+Time: 105
+Job D worked for 1
+Time: 106
+Job O worked for 1
+Time: 107
+Job T worked for 1
+Time: 108
+Job G completed!
+Time: 109
+Job J worked for 1
+Time: 110
+Job C worked for 1
+Time: 111
+Job L worked for 1
+Time: 112
+Job Q worked for 1
+Time: 113
+Job I worked for 1
+Time: 114
+Job K worked for 1
+Time: 115
+Job D worked for 1
+Time: 116
+Job O worked for 1
+Time: 117
+Job T worked for 1
+Time: 118
+Job J worked for 1
+Time: 119
+Job C worked for 1
+Time: 120
+Job L completed!
+Time: 121
+Job Q worked for 1
+Time: 122
+Job I worked for 1
+Time: 123
+Job K worked for 1
+Time: 124
+Job D worked for 1
+Time: 125
+Job O worked for 1
+Time: 126
+Job T completed!
+Time: 127
+Job J worked for 1
+Time: 128
+Job C worked for 1
+Time: 129
+Job Q completed!
+Time: 130
+Job I worked for 1
+Time: 131
+Job K worked for 1
+Time: 132
+Job D worked for 1
+Time: 133
+Job O worked for 1
+Time: 134
+Job J worked for 1
+Time: 135
+Job C completed!
+Time: 136
+Job I worked for 1
+Time: 137
+Job K worked for 1
+Time: 138
+Job D completed!
+Time: 139
+Job O worked for 1
+Time: 140
+Job J worked for 1
+Time: 141
+Job I worked for 1
+Time: 142
+Job K worked for 1
+Time: 143
+Job O completed!
+Time: 144
+Job J worked for 1
+Time: 145
+Job I completed!
+Time: 146
+Job K worked for 1
+Time: 147
+Job J completed!
+Time: 148
+Job K completed!
+Job H completed at time 12
+Job B completed at time 25
+Job F completed at time 29
+Job N completed at time 30
+Job M completed at time 39
+Job P completed at time 59
+Job R completed at time 62
+Job S completed at time 69
+Job E completed at time 78
+Job A completed at time 93
+Job G completed at time 109
+Job L completed at time 121
+Job T completed at time 127
+Job Q completed at time 130
+Job C completed at time 136
+Job D completed at time 139
+Job O completed at time 144
+Job I completed at time 146
+Job J completed at time 148
+Job K completed at time 149
+Number of jobs = 20
+Average Turnaround Time: 45.65
+Average Response Time: 4.90
+Average Wait Time: 38.30
+Throughput: 0.13 jobs per quantum
+
+pid| prio|0---------1---------2---------3---------4---------5---------6---------7---------8---------9--------end 99
+A  |  1  |      __________
+B  |  4  |                                            _____
+C  |  2  |                                    _______
+D  |  4  |                                                                                        ___
+E  |  4  |                                                                                    _____
+F  |  4  |                                                     ______
+G  |  2  |                                                                __________
+H  |  2  |  ___
+I  |  2  |                                                        _______
+J  |  3  |                                                                                     ______
+K  |  2  |            ______
+L  |  2  |                           ________
+M  |  4  |                                                                            _
+N  |  4  |                                              ______
+O  |  1  |                                                                                                 _______
+P  |  2  |                                                                                           _________
+Q  |  4  |                                                                              _______
+R  |  1  |                                ____
+S  |  1  |                                                                                          __
+T  |  4  |                    ______
+
+ID: A, Arrival Time: 6, Service Time: 10, Priority: 1
+ID: B, Arrival Time: 44, Service Time: 5, Priority: 4
+ID: C, Arrival Time: 36, Service Time: 7, Priority: 2
+ID: D, Arrival Time: 88, Service Time: 3, Priority: 4
+ID: E, Arrival Time: 84, Service Time: 5, Priority: 4
+ID: F, Arrival Time: 53, Service Time: 6, Priority: 4
+ID: G, Arrival Time: 64, Service Time: 10, Priority: 2
+ID: H, Arrival Time: 2, Service Time: 3, Priority: 2
+ID: I, Arrival Time: 56, Service Time: 7, Priority: 2
+ID: J, Arrival Time: 85, Service Time: 6, Priority: 3
+ID: K, Arrival Time: 12, Service Time: 6, Priority: 2
+ID: L, Arrival Time: 27, Service Time: 8, Priority: 2
+ID: M, Arrival Time: 76, Service Time: 1, Priority: 4
+ID: N, Arrival Time: 46, Service Time: 6, Priority: 4
+ID: O, Arrival Time: 97, Service Time: 7, Priority: 1
+ID: P, Arrival Time: 91, Service Time: 9, Priority: 2
+ID: Q, Arrival Time: 78, Service Time: 7, Priority: 4
+ID: R, Arrival Time: 32, Service Time: 4, Priority: 1
+ID: S, Arrival Time: 90, Service Time: 2, Priority: 1
+ID: T, Arrival Time: 20, Service Time: 6, Priority: 4
+Simulation Start:
+Time: 0
+Time: 1
+Time: 2
+Job H arrived at 2
+Job H worked for 1
+Time: 3
+Job H worked for 1
+Time: 4
+Job H completed!
+Time: 5
+Time: 6
+Job A arrived at 6
+Job A worked for 1
+Time: 7
+Job A worked for 1
+Time: 8
+Job A worked for 1
+Time: 9
+Job A worked for 1
+Time: 10
+Job A worked for 1
+Time: 11
+Job A worked for 1
+Time: 12
+Job K arrived at 12
+Job A worked for 1
+Time: 13
+Job K worked for 1
+Time: 14
+Job A worked for 1
+Time: 15
+Job K worked for 1
+Time: 16
+Job A worked for 1
+Time: 17
+Job K worked for 1
+Time: 18
+Job A completed!
+Time: 19
+Job K worked for 1
+Time: 20
+Job T arrived at 20
+Job K worked for 1
+Time: 21
+Job T worked for 1
+Time: 22
+Job K completed!
+Time: 23
+Job T worked for 1
+Time: 24
+Job T worked for 1
+Time: 25
+Job T worked for 1
+Time: 26
+Job T worked for 1
+Time: 27
+Job L arrived at 27
+Job T completed!
+Time: 28
+Job L worked for 1
+Time: 29
+Job L worked for 1
+Time: 30
+Job L worked for 1
+Time: 31
+Job L worked for 1
+Time: 32
+Job R arrived at 32
+Job L worked for 1
+Time: 33
+Job R worked for 1
+Time: 34
+Job L worked for 1
+Time: 35
+Job R worked for 1
+Time: 36
+Job C arrived at 36
+Job L worked for 1
+Time: 37
+Job R worked for 1
+Time: 38
+Job C worked for 1
+Time: 39
+Job L completed!
+Time: 40
+Job R completed!
+Time: 41
+Job C worked for 1
+Time: 42
+Job C worked for 1
+Time: 43
+Job C worked for 1
+Time: 44
+Job B arrived at 44
+Job C worked for 1
+Time: 45
+Job B worked for 1
+Time: 46
+Job N arrived at 46
+Job C worked for 1
+Time: 47
+Job B worked for 1
+Time: 48
+Job N worked for 1
+Time: 49
+Job C completed!
+Time: 50
+Job B worked for 1
+Time: 51
+Job N worked for 1
+Time: 52
+Job B worked for 1
+Time: 53
+Job F arrived at 53
+Job N worked for 1
+Time: 54
+Job B completed!
+Time: 55
+Job F worked for 1
+Time: 56
+Job I arrived at 56
+Job N worked for 1
+Time: 57
+Job F worked for 1
+Time: 58
+Job I worked for 1
+Time: 59
+Job N worked for 1
+Time: 60
+Job F worked for 1
+Time: 61
+Job I worked for 1
+Time: 62
+Job N completed!
+Time: 63
+Job F worked for 1
+Time: 64
+Job G arrived at 64
+Job I worked for 1
+Time: 65
+Job F worked for 1
+Time: 66
+Job G worked for 1
+Time: 67
+Job I worked for 1
+Time: 68
+Job F completed!
+Time: 69
+Job G worked for 1
+Time: 70
+Job I worked for 1
+Time: 71
+Job G worked for 1
+Time: 72
+Job I worked for 1
+Time: 73
+Job G worked for 1
+Time: 74
+Job I completed!
+Time: 75
+Job G worked for 1
+Time: 76
+Job M arrived at 76
+Job G worked for 1
+Time: 77
+Job M completed!
+Time: 78
+Job Q arrived at 78
+Job G worked for 1
+Time: 79
+Job Q worked for 1
+Time: 80
+Job G worked for 1
+Time: 81
+Job Q worked for 1
+Time: 82
+Job G worked for 1
+Time: 83
+Job Q worked for 1
+Time: 84
+Job E arrived at 84
+Job G completed!
+Time: 85
+Job J arrived at 85
+Job Q worked for 1
+Time: 86
+Job E worked for 1
+Time: 87
+Job J worked for 1
+Time: 88
+Job D arrived at 88
+Job Q worked for 1
+Time: 89
+Job E worked for 1
+Time: 90
+Job S arrived at 90
+Job J worked for 1
+Time: 91
+Job P arrived at 91
+Job D worked for 1
+Time: 92
+Job Q worked for 1
+Time: 93
+Job E worked for 1
+Time: 94
+Job S worked for 1
+Time: 95
+Job J worked for 1
+Time: 96
+Job P worked for 1
+Time: 97
+Job O arrived at 97
+Job D worked for 1
+Time: 98
+Job Q completed!
+Time: 99
+Job E worked for 1
+Time: 100
+Job S completed!
+Time: 101
+Job J worked for 1
+Time: 102
+Job P worked for 1
+Time: 103
+Job O worked for 1
+Time: 104
+Job D completed!
+Time: 105
+Job E completed!
+Time: 106
+Job J worked for 1
+Time: 107
+Job P worked for 1
+Time: 108
+Job O worked for 1
+Time: 109
+Job J completed!
+Time: 110
+Job P worked for 1
+Time: 111
+Job O worked for 1
+Time: 112
+Job P worked for 1
+Time: 113
+Job O worked for 1
+Time: 114
+Job P worked for 1
+Time: 115
+Job O worked for 1
+Time: 116
+Job P worked for 1
+Time: 117
+Job O worked for 1
+Time: 118
+Job P worked for 1
+Time: 119
+Job O completed!
+Time: 120
+Job P completed!
+Job H completed at time 5
+Job A completed at time 19
+Job K completed at time 23
+Job T completed at time 28
+Job L completed at time 40
+Job R completed at time 41
+Job C completed at time 50
+Job B completed at time 55
+Job N completed at time 63
+Job F completed at time 69
+Job I completed at time 75
+Job M completed at time 78
+Job G completed at time 85
+Job Q completed at time 99
+Job S completed at time 101
+Job D completed at time 105
+Job E completed at time 106
+Job J completed at time 110
+Job O completed at time 120
+Job P completed at time 121
+Number of jobs = 20
+Average Turnaround Time: 15.30
+Average Response Time: 1.95
+Average Wait Time: 9.40
+Throughput: 0.17 jobs per quantum
+
+pid| prio|0---------1---------2---------3---------4---------5---------6---------7---------8---------9--------end 99
+A  |  3  |                                          __________
+B  |  4  |                                                                                  _____
+C  |  1  |                ___
+D  |  3  |                                                                                __________
+E  |  4  |                                _____
+F  |  3  |              ________
+G  |  3  |                                                                                       _______
+H  |  3  |                            ____
+I  |  2  |                                                   __________
+J  |  2  |                     ________
+K  |  4  |                                                                       ________
+L  |  4  |                                                                                                ____
+M  |  3  |  ___
+N  |  2  |                                                                           __________
+O  |  4  |                         _______
+P  |  3  |                                                         _______
+Q  |  2  |                                     __________
+R  |  1  |                                                              _______
+S  |  2  |      __________
+T  |  2  |  _________
+
+ID: A, Arrival Time: 42, Service Time: 10, Priority: 3
+ID: B, Arrival Time: 82, Service Time: 5, Priority: 4
+ID: C, Arrival Time: 16, Service Time: 3, Priority: 1
+ID: D, Arrival Time: 80, Service Time: 10, Priority: 3
+ID: E, Arrival Time: 32, Service Time: 5, Priority: 4
+ID: F, Arrival Time: 14, Service Time: 8, Priority: 3
+ID: G, Arrival Time: 87, Service Time: 7, Priority: 3
+ID: H, Arrival Time: 28, Service Time: 4, Priority: 3
+ID: I, Arrival Time: 51, Service Time: 10, Priority: 2
+ID: J, Arrival Time: 21, Service Time: 8, Priority: 2
+ID: K, Arrival Time: 71, Service Time: 8, Priority: 4
+ID: L, Arrival Time: 96, Service Time: 4, Priority: 4
+ID: M, Arrival Time: 2, Service Time: 3, Priority: 3
+ID: N, Arrival Time: 75, Service Time: 10, Priority: 2
+ID: O, Arrival Time: 25, Service Time: 7, Priority: 4
+ID: P, Arrival Time: 57, Service Time: 7, Priority: 3
+ID: Q, Arrival Time: 37, Service Time: 10, Priority: 2
+ID: R, Arrival Time: 62, Service Time: 7, Priority: 1
+ID: S, Arrival Time: 6, Service Time: 10, Priority: 2
+ID: T, Arrival Time: 2, Service Time: 9, Priority: 2
+Simulation Start:
+Time: 0
+Time: 1
+Time: 2
+Job M arrived at 2
+Job T arrived at 2
+Job M worked for 1
+Time: 3
+Job T worked for 1
+Time: 4
+Job M worked for 1
+Time: 5
+Job T worked for 1
+Time: 6
+Job S arrived at 6
+Job M completed!
+Time: 7
+Job T worked for 1
+Time: 8
+Job S worked for 1
+Time: 9
+Job T worked for 1
+Time: 10
+Job S worked for 1
+Time: 11
+Job T worked for 1
+Time: 12
+Job S worked for 1
+Time: 13
+Job T worked for 1
+Time: 14
+Job F arrived at 14
+Job S worked for 1
+Time: 15
+Job T worked for 1
+Time: 16
+Job C arrived at 16
+Job F worked for 1
+Time: 17
+Job S worked for 1
+Time: 18
+Job T worked for 1
+Time: 19
+Job C worked for 1
+Time: 20
+Job F worked for 1
+Time: 21
+Job J arrived at 21
+Job S worked for 1
+Time: 22
+Job T completed!
+Time: 23
+Job C worked for 1
+Time: 24
+Job F worked for 1
+Time: 25
+Job O arrived at 25
+Job J worked for 1
+Time: 26
+Job S worked for 1
+Time: 27
+Job C completed!
+Time: 28
+Job H arrived at 28
+Job F worked for 1
+Time: 29
+Job O worked for 1
+Time: 30
+Job J worked for 1
+Time: 31
+Job S worked for 1
+Time: 32
+Job E arrived at 32
+Job H worked for 1
+Time: 33
+Job F worked for 1
+Time: 34
+Job O worked for 1
+Time: 35
+Job J worked for 1
+Time: 36
+Job S worked for 1
+Time: 37
+Job Q arrived at 37
+Job E worked for 1
+Time: 38
+Job H worked for 1
+Time: 39
+Job F worked for 1
+Time: 40
+Job O worked for 1
+Time: 41
+Job J worked for 1
+Time: 42
+Job A arrived at 42
+Job S completed!
+Time: 43
+Job Q worked for 1
+Time: 44
+Job E worked for 1
+Time: 45
+Job H worked for 1
+Time: 46
+Job F worked for 1
+Time: 47
+Job O worked for 1
+Time: 48
+Job J worked for 1
+Time: 49
+Job A worked for 1
+Time: 50
+Job Q worked for 1
+Time: 51
+Job I arrived at 51
+Job E worked for 1
+Time: 52
+Job H completed!
+Time: 53
+Job F completed!
+Time: 54
+Job O worked for 1
+Time: 55
+Job J worked for 1
+Time: 56
+Job A worked for 1
+Time: 57
+Job P arrived at 57
+Job Q worked for 1
+Time: 58
+Job I worked for 1
+Time: 59
+Job E worked for 1
+Time: 60
+Job O worked for 1
+Time: 61
+Job J worked for 1
+Time: 62
+Job R arrived at 62
+Job A worked for 1
+Time: 63
+Job P worked for 1
+Time: 64
+Job Q worked for 1
+Time: 65
+Job I worked for 1
+Time: 66
+Job E completed!
+Time: 67
+Job O completed!
+Time: 68
+Job J completed!
+Time: 69
+Job R worked for 1
+Time: 70
+Job A worked for 1
+Time: 71
+Job K arrived at 71
+Job P worked for 1
+Time: 72
+Job Q worked for 1
+Time: 73
+Job I worked for 1
+Time: 74
+Job R worked for 1
+Time: 75
+Job N arrived at 75
+Job A worked for 1
+Time: 76
+Job K worked for 1
+Time: 77
+Job P worked for 1
+Time: 78
+Job Q worked for 1
+Time: 79
+Job I worked for 1
+Time: 80
+Job D arrived at 80
+Job R worked for 1
+Time: 81
+Job N worked for 1
+Time: 82
+Job B arrived at 82
+Job A worked for 1
+Time: 83
+Job K worked for 1
+Time: 84
+Job P worked for 1
+Time: 85
+Job Q worked for 1
+Time: 86
+Job I worked for 1
+Time: 87
+Job G arrived at 87
+Job D worked for 1
+Time: 88
+Job R worked for 1
+Time: 89
+Job N worked for 1
+Time: 90
+Job B worked for 1
+Time: 91
+Job A worked for 1
+Time: 92
+Job K worked for 1
+Time: 93
+Job P worked for 1
+Time: 94
+Job Q worked for 1
+Time: 95
+Job I worked for 1
+Time: 96
+Job L arrived at 96
+Job G worked for 1
+Time: 97
+Job D worked for 1
+Time: 98
+Job R worked for 1
+Time: 99
+Job N worked for 1
+Time: 100
+Job B worked for 1
+Time: 101
+Job A worked for 1
+Time: 102
+Job K worked for 1
+Time: 103
+Job P worked for 1
+Time: 104
+Job Q worked for 1
+Time: 105
+Job I worked for 1
+Time: 106
+Job L worked for 1
+Time: 107
+Job G worked for 1
+Time: 108
+Job D worked for 1
+Time: 109
+Job R worked for 1
+Time: 110
+Job N worked for 1
+Time: 111
+Job B worked for 1
+Time: 112
+Job A worked for 1
+Time: 113
+Job K worked for 1
+Time: 114
+Job P completed!
+Time: 115
+Job Q completed!
+Time: 116
+Job I worked for 1
+Time: 117
+Job L worked for 1
+Time: 118
+Job G worked for 1
+Time: 119
+Job D worked for 1
+Time: 120
+Job R completed!
+Time: 121
+Job N worked for 1
+Time: 122
+Job B worked for 1
+Time: 123
+Job A completed!
+Time: 124
+Job K worked for 1
+Time: 125
+Job I worked for 1
+Time: 126
+Job L worked for 1
+Time: 127
+Job G worked for 1
+Time: 128
+Job D worked for 1
+Time: 129
+Job N worked for 1
+Time: 130
+Job B completed!
+Time: 131
+Job K worked for 1
+Time: 132
+Job I completed!
+Time: 133
+Job L completed!
+Time: 134
+Job G worked for 1
+Time: 135
+Job D worked for 1
+Time: 136
+Job N worked for 1
+Time: 137
+Job K completed!
+Time: 138
+Job G worked for 1
+Time: 139
+Job D worked for 1
+Time: 140
+Job N worked for 1
+Time: 141
+Job G completed!
+Time: 142
+Job D worked for 1
+Time: 143
+Job N worked for 1
+Time: 144
+Job D worked for 1
+Time: 145
+Job N completed!
+Time: 146
+Job D completed!
+Job M completed at time 7
+Job T completed at time 23
+Job C completed at time 28
+Job S completed at time 43
+Job H completed at time 53
+Job F completed at time 54
+Job E completed at time 67
+Job O completed at time 68
+Job J completed at time 69
+Job P completed at time 115
+Job Q completed at time 116
+Job R completed at time 121
+Job A completed at time 124
+Job B completed at time 131
+Job I completed at time 133
+Job L completed at time 134
+Job K completed at time 138
+Job G completed at time 142
+Job N completed at time 146
+Job D completed at time 147
+Number of jobs = 20
+Average Turnaround Time: 48.65
+Average Response Time: 5.15
+Average Wait Time: 41.40
+Throughput: 0.14 jobs per quantum
+
+pid| prio|0---------1---------2---------3---------4---------5---------6---------7---------8---------9--------end 99
+A  |  2  |                                 _
+B  |  3  |                                                                                             __________
+C  |  3  |                          _____
+D  |  2  |                                                 ____
+E  |  2  |                                 ____
+F  |  4  |                                                                        ______
+G  |  4  |                                           __________
+H  |  2  |                                                         ______
+I  |  1  |                ________
+J  |  3  |                                                                                     _______
+K  |  1  |                                                       __
+L  |  3  |                        _
+M  |  3  |                                                                                ____
+N  |  4  |                                _____
+O  |  4  |                                                                __________
+P  |  1  |  __________
+Q  |  3  |                                                                             ________
+R  |  1  |                                       _________
+S  |  2  |           ___
+T  |  4  |                        ______
+
+ID: A, Arrival Time: 33, Service Time: 1, Priority: 2
+ID: B, Arrival Time: 93, Service Time: 10, Priority: 3
+ID: C, Arrival Time: 26, Service Time: 5, Priority: 3
+ID: D, Arrival Time: 49, Service Time: 4, Priority: 2
+ID: E, Arrival Time: 33, Service Time: 4, Priority: 2
+ID: F, Arrival Time: 72, Service Time: 6, Priority: 4
+ID: G, Arrival Time: 43, Service Time: 10, Priority: 4
+ID: H, Arrival Time: 57, Service Time: 6, Priority: 2
+ID: I, Arrival Time: 16, Service Time: 8, Priority: 1
+ID: J, Arrival Time: 85, Service Time: 7, Priority: 3
+ID: K, Arrival Time: 55, Service Time: 2, Priority: 1
+ID: L, Arrival Time: 24, Service Time: 1, Priority: 3
+ID: M, Arrival Time: 80, Service Time: 4, Priority: 3
+ID: N, Arrival Time: 32, Service Time: 5, Priority: 4
+ID: O, Arrival Time: 64, Service Time: 10, Priority: 4
+ID: P, Arrival Time: 2, Service Time: 10, Priority: 1
+ID: Q, Arrival Time: 77, Service Time: 8, Priority: 3
+ID: R, Arrival Time: 39, Service Time: 9, Priority: 1
+ID: S, Arrival Time: 11, Service Time: 3, Priority: 2
+ID: T, Arrival Time: 24, Service Time: 6, Priority: 4
+Simulation Start:
+Time: 0
+Time: 1
+Time: 2
+Job P arrived at 2
+Job P worked for 1
+Time: 3
+Job P worked for 1
+Time: 4
+Job P worked for 1
+Time: 5
+Job P worked for 1
+Time: 6
+Job P worked for 1
+Time: 7
+Job P worked for 1
+Time: 8
+Job P worked for 1
+Time: 9
+Job P worked for 1
+Time: 10
+Job P worked for 1
+Time: 11
+Job S arrived at 11
+Job P completed!
+Time: 12
+Job S worked for 1
+Time: 13
+Job S worked for 1
+Time: 14
+Job S completed!
+Time: 15
+Time: 16
+Job I arrived at 16
+Job I worked for 1
+Time: 17
+Job I worked for 1
+Time: 18
+Job I worked for 1
+Time: 19
+Job I worked for 1
+Time: 20
+Job I worked for 1
+Time: 21
+Job I worked for 1
+Time: 22
+Job I worked for 1
+Time: 23
+Job I completed!
+Time: 24
+Job L arrived at 24
+Job T arrived at 24
+Job L completed!
+Time: 25
+Job T worked for 1
+Time: 26
+Job C arrived at 26
+Job T worked for 1
+Time: 27
+Job C worked for 1
+Time: 28
+Job T worked for 1
+Time: 29
+Job C worked for 1
+Time: 30
+Job T worked for 1
+Time: 31
+Job C worked for 1
+Time: 32
+Job N arrived at 32
+Job T worked for 1
+Time: 33
+Job A arrived at 33
+Job E arrived at 33
+Job C worked for 1
+Time: 34
+Job N worked for 1
+Time: 35
+Job T completed!
+Time: 36
+Job A completed!
+Time: 37
+Job E worked for 1
+Time: 38
+Job C completed!
+Time: 39
+Job R arrived at 39
+Job N worked for 1
+Time: 40
+Job E worked for 1
+Time: 41
+Job R worked for 1
+Time: 42
+Job N worked for 1
+Time: 43
+Job G arrived at 43
+Job E worked for 1
+Time: 44
+Job R worked for 1
+Time: 45
+Job N worked for 1
+Time: 46
+Job G worked for 1
+Time: 47
+Job E completed!
+Time: 48
+Job R worked for 1
+Time: 49
+Job D arrived at 49
+Job N completed!
+Time: 50
+Job G worked for 1
+Time: 51
+Job R worked for 1
+Time: 52
+Job D worked for 1
+Time: 53
+Job G worked for 1
+Time: 54
+Job R worked for 1
+Time: 55
+Job K arrived at 55
+Job D worked for 1
+Time: 56
+Job G worked for 1
+Time: 57
+Job H arrived at 57
+Job R worked for 1
+Time: 58
+Job K worked for 1
+Time: 59
+Job D worked for 1
+Time: 60
+Job G worked for 1
+Time: 61
+Job H worked for 1
+Time: 62
+Job R worked for 1
+Time: 63
+Job K completed!
+Time: 64
+Job O arrived at 64
+Job D completed!
+Time: 65
+Job G worked for 1
+Time: 66
+Job H worked for 1
+Time: 67
+Job R worked for 1
+Time: 68
+Job O worked for 1
+Time: 69
+Job G worked for 1
+Time: 70
+Job H worked for 1
+Time: 71
+Job R completed!
+Time: 72
+Job F arrived at 72
+Job O worked for 1
+Time: 73
+Job G worked for 1
+Time: 74
+Job H worked for 1
+Time: 75
+Job F worked for 1
+Time: 76
+Job O worked for 1
+Time: 77
+Job Q arrived at 77
+Job G worked for 1
+Time: 78
+Job H worked for 1
+Time: 79
+Job F worked for 1
+Time: 80
+Job M arrived at 80
+Job O worked for 1
+Time: 81
+Job Q worked for 1
+Time: 82
+Job G completed!
+Time: 83
+Job H completed!
+Time: 84
+Job F worked for 1
+Time: 85
+Job J arrived at 85
+Job M worked for 1
+Time: 86
+Job O worked for 1
+Time: 87
+Job Q worked for 1
+Time: 88
+Job F worked for 1
+Time: 89
+Job J worked for 1
+Time: 90
+Job M worked for 1
+Time: 91
+Job O worked for 1
+Time: 92
+Job Q worked for 1
+Time: 93
+Job B arrived at 93
+Job F worked for 1
+Time: 94
+Job J worked for 1
+Time: 95
+Job M worked for 1
+Time: 96
+Job O worked for 1
+Time: 97
+Job Q worked for 1
+Time: 98
+Job B worked for 1
+Time: 99
+Job F completed!
+Time: 100
+Job J worked for 1
+Time: 101
+Job M completed!
+Time: 102
+Job O worked for 1
+Time: 103
+Job Q worked for 1
+Time: 104
+Job B worked for 1
+Time: 105
+Job J worked for 1
+Time: 106
+Job O worked for 1
+Time: 107
+Job Q worked for 1
+Time: 108
+Job B worked for 1
+Time: 109
+Job J worked for 1
+Time: 110
+Job O completed!
+Time: 111
+Job Q worked for 1
+Time: 112
+Job B worked for 1
+Time: 113
+Job J worked for 1
+Time: 114
+Job Q completed!
+Time: 115
+Job B worked for 1
+Time: 116
+Job J completed!
+Time: 117
+Job B worked for 1
+Time: 118
+Job B worked for 1
+Time: 119
+Job B worked for 1
+Time: 120
+Job B worked for 1
+Time: 121
+Job B completed!
+Job P completed at time 12
+Job S completed at time 15
+Job I completed at time 24
+Job L completed at time 25
+Job T completed at time 36
+Job A completed at time 37
+Job C completed at time 39
+Job E completed at time 48
+Job N completed at time 50
+Job K completed at time 64
+Job D completed at time 65
+Job R completed at time 72
+Job G completed at time 83
+Job H completed at time 84
+Job F completed at time 100
+Job M completed at time 102
+Job O completed at time 111
+Job Q completed at time 115
+Job J completed at time 117
+Job B completed at time 122
+Number of jobs = 20
+Average Turnaround Time: 20.30
+Average Response Time: 2.60
+Average Wait Time: 14.35
+Throughput: 0.16 jobs per quantum
+
