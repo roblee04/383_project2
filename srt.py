@@ -1,6 +1,8 @@
 from prettytable import PrettyTable
-from job import create_job
-
+from job import create_job, graph
+print("----------------------------------------------------------------------")
+print("Short Remaining Time Fisrt(SRT) Outputs")
+print("----------------------------------------------------------------------")
 class Job:
     def __init__(self, id, arrival_time, burst_time, priority):
         self.id = id
@@ -69,7 +71,7 @@ def main():
         print("Avg Turn around time: ", avg_turnaround_time / size)
         print("Avg Waiting time: ", avg_waiting_time / size)
         print("Avg Response time: ", avg_response_time / size)
-        print("Throughput: ", size / time)
+        print("Throughput: ", size / time , "processes per quantum time")
         print("Completion Time: ", time)
         print(table)
         print()
@@ -80,7 +82,7 @@ def main():
     print("Turn around time: ", total_avg_tat / 5)
     print("Waiting time: ", total_avg_wt / 5)
     print("Response time: ", total_avg_rt / 5)
-    print("Throughput: ", total_avg_throughput / 5)
+    print("Throughput: ", total_avg_throughput / 5 , "processes per quantum time")
     print("Completion time: ", total_avg_completion_time / 5)
 
 if __name__ == '__main__':
