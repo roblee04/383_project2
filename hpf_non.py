@@ -89,7 +89,7 @@ def output(lst):
     print("Throughput (jobs completed in 99 time slices): " + str(count))
 
 
-def hpf(jobs, lst): # 4 is the highest priority
+def hpf(jobs, lst, aging_threshold): # 1 is the highest priority
     # first, sort by arrival time
     jobs.sort(key=lambda x: x.arrival_time)
 
@@ -109,10 +109,9 @@ def hpf(jobs, lst): # 4 is the highest priority
                 num_jobs -= 1
         
         # on each iteration, sort working queue by priority
-        working_q.sort(key=lambda x: x.priority, reverse = True)
-        # this may starve other processes, can implement aging here
+        working_q.sort(key=lambda x: x.priority)
 
-        # # put a new job to work
+        # put a new job to work
         if time_left == 0 and working_q:
             curr_job = working_q.pop(0)
             id = curr_job.id
@@ -129,6 +128,15 @@ def hpf(jobs, lst): # 4 is the highest priority
         # decrement time_left if there is a job running
         if time_left > 0:
             time_left -= 1
+        
+        # implement aging: Boost the priority of waiting jobs that exceeded the aging threshold
+        for j in working_q:
+            # Increment age for all waiting jobs
+            j.age += 1 
+            if j.age >= aging_threshold and j.priority > 1:
+                j.priority -= 1
+                j.age = 0
+                print(f"Job {j.id} priority boosted to {j.priority}")
     
     return job_order
 
@@ -144,7 +152,7 @@ for s in seeds:
     create_job(jobs, size, seed)
     
     startend = [] # startend, is a list used to help calculate all the outputs
-    jobs = hpf(jobs, startend)
+    jobs = hpf(jobs, startend, 5) # setting aging threshold to 5
     print()
     print("SEED: " + str(seed))
     output(startend)

@@ -55,7 +55,7 @@ def output(lst):
 
     print("Throughput (jobs completed in 99 time slices): " + str(count))
 
-def hpf(jobs): # 4 is the highest priority
+def hpf(jobs, aging_threshold): # 1 is the highest priority
     # 4 priority queues, trickle down when there are free time slices
     p1 = []
     p2 = []
@@ -65,7 +65,6 @@ def hpf(jobs): # 4 is the highest priority
     tc = ""
 
     time = 0       # global time
-    time_left = 0 # time left to finish current job, 
 
     job_order = []
     num_jobs = len(jobs)
@@ -96,8 +95,8 @@ def hpf(jobs): # 4 is the highest priority
 
         # for each time slice, work on the highest priority job
         # trickle down in priority queues
-        if p4:
-            curr_job = p4[0]
+        if p1:
+            curr_job = p1[0]
             id = curr_job.id
             curr_job.time_on_cpu += 1
 
@@ -106,22 +105,8 @@ def hpf(jobs): # 4 is the highest priority
 
             # if we worked on job enough, it is popped
             if curr_job.time_on_cpu == curr_job.service_time:
-                job_order.append(p4.pop(0))
-
                 curr_job.end = time
-
-        elif p3:
-            curr_job = p3[0]
-            id = curr_job.id
-            curr_job.time_on_cpu += 1
-
-            if curr_job.start == 0:
-                curr_job.start = time
-            
-            if curr_job.time_on_cpu == curr_job.service_time:
-                job_order.append(p3.pop(0))
-
-                curr_job.end = time
+                job_order.append(p1.pop(0))
 
         elif p2:
             curr_job = p2[0]
@@ -132,12 +117,23 @@ def hpf(jobs): # 4 is the highest priority
                 curr_job.start = time
             
             if curr_job.time_on_cpu == curr_job.service_time:
+                curr_job.end = time
                 job_order.append(p2.pop(0))
 
-                curr_job.end = time
+        elif p3:
+            curr_job = p3[0]
+            id = curr_job.id
+            curr_job.time_on_cpu += 1
 
-        elif p1:
-            curr_job = p1[0]
+            if curr_job.start == 0:
+                curr_job.start = time
+            
+            if curr_job.time_on_cpu == curr_job.service_time:
+                curr_job.end = time
+                job_order.append(p3.pop(0))
+
+        elif p4:
+            curr_job = p4[0]
             id = curr_job.id
             curr_job.time_on_cpu += 1
             
@@ -145,16 +141,42 @@ def hpf(jobs): # 4 is the highest priority
                 curr_job.start = time
 
             if curr_job.time_on_cpu == curr_job.service_time:
-                job_order.append(p1.pop(0))
-
                 curr_job.end = time
+                job_order.append(p4.pop(0))
 
         if id != "0":
             tc += id
 
-        
         #increment time
         time += 1
+
+        # implement aging: Boost the priority of waiting jobs that exceeded the aging threshold
+        for j in p2:
+            if j != curr_job:
+                j.age += 1 
+                if j.age >= aging_threshold:
+                    j.priority = 1
+                    p1.append(j)
+                    p2.remove(j)
+                    print(f"Job {j.id} priority boosted to {j.priority}")
+        for j in p3:
+            if j != curr_job:
+                j.age += 1 
+                if j.age >= aging_threshold:
+                    j.priority -= 1
+                    j.age = 0
+                    p2.append(j)
+                    p3.remove(j)
+                    print(f"Job {j.id} priority boosted to {j.priority}")
+        for j in p4:
+            if j != curr_job:
+                j.age += 1 
+                if j.age >= aging_threshold:
+                    j.priority -= 1
+                    j.age = 0
+                    p3.append(j)
+                    p4.remove(j)
+                    print(f"Job {j.id} priority boosted to {j.priority}")
 
     print("TIMECHART: \n" + tc + "\n")
 
@@ -176,7 +198,7 @@ for s in seeds:
     
     print()
     print("SEED: " + str(seed) + "\n")
-    hpf(jobs)
+    hpf(jobs, 5)
 
 
     print("_________________________________________________")
