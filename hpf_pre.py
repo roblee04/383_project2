@@ -1,3 +1,8 @@
+import random
+import operator
+from job import *
+
+
 def hpf(jobs): # 4 is the highest priority
     # first, sort by arrival time
     p1 = []
@@ -26,3 +31,35 @@ def hpf(jobs): # 4 is the highest priority
     # need to fill in the gaps. with runtime
     new_jobs = p1 + p2 + p3 + p4
     return new_jobs
+
+
+seeds = [139342, 761639, 567317, 292160, 803931]
+
+size = 20
+jobs = [0] * size
+seed = 139342
+
+create_job(jobs, size, seed)
+
+jobs = hpf(jobs)
+graph(jobs)
+
+# # iterate on all seeds
+# for s in seeds:
+#     size = 20
+#     jobs = [0] * size
+#     seed = s
+
+#     create_job(jobs, size, seed)
+    
+#     startend = [] # startend, is a list used to help calculate all the outputs
+#     jobs = hpf(jobs, startend)
+#     print()
+#     print("SEED: " + str(seed))
+#     output(startend)
+
+#     print("_________________________________________________")
+
+
+
+
