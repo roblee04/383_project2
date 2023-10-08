@@ -65,7 +65,7 @@ def output(lst):
         tat = j[3] - j[4]
         # Average waiting time, Waiting Time = TAT - Service Time
         wait = tat - j[5] 
-        # Average response time, Response Time = Run Time – Arrival Time
+        # Average response time, Response Time = Start Time – Arrival Time
         res = j[2] - j[4]
 
         tot_tat += tat

@@ -29,11 +29,11 @@ def output(lst):
         # lst element: [id, prio, start, end, arrival_time, service time]
         
         # Average turnaround time, Turnaround Time = Completion Time – Arrival Time
-        tat = j.end - j.start
+        tat = j.end - j.arrival_time
         # Average waiting time, Waiting Time = TAT - Service Time
         wait = tat - j.service_time
         # Average response time, Response Time = Run Time – Arrival Time
-        res = j.end - j.arrival_time
+        res = j.start - j.arrival_time
 
         tot_tat += tat
         tot_wait += wait
