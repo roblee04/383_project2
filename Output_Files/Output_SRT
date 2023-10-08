@@ -1,6 +1,7 @@
 ----------------------------------------------------------------------
-Short Remaining Time Fisrt(SRT) Outputs
+Output For Shortest Time First(SRT) Algorithm
 ----------------------------------------------------------------------
+Time Chart: IDLE IDLE B B B B B B B B B B Q Q Q Q E E E E E E E I I I I I I I I I G A A M M M A A A S S S S S C C C C C J J J J J J O O O O O O O D D D D D T T T T T T G G G G G G G G N N N N N N N N N R H H H H F F F K K K K R R R R R P P P P P P P P P L L L L L L L L L L
 Job scheduling order:  ['B', 'Q', 'E', 'I', 'M', 'A', 'S', 'C', 'J', 'O', 'D', 'T', 'G', 'N', 'H', 'F', 'K', 'R', 'P', 'L']
 Avg Turn around time:  19.2
 Avg Waiting time:  12.9
@@ -32,6 +33,7 @@ Completion Time:  128
 |      L       |      72      |     10     |    1     |        56        |     46    |       46      |       128       |
 +--------------+--------------+------------+----------+------------------+-----------+---------------+-----------------+
 
+Time Chart: IDLE IDLE H H H H H B B B B B M M M F F F M M M M N N N N N N N N N P P P P P P P P P E E E E E E E E A R R A A A A A A A Q Q Q Q Q Q Q Q Q T T T T T T T T T S S S S S S S S S C C C D D D D D D L L L I I I I I I I C C C C C C C K K K K K K K K O O O O O O O O O O G G G G G G G G G G J J J J J J J J J J
 Job scheduling order:  ['H', 'B', 'F', 'M', 'N', 'P', 'E', 'R', 'A', 'Q', 'T', 'S', 'D', 'L', 'I', 'C', 'K', 'O', 'G', 'J']
 Avg Turn around time:  26.25
 Avg Waiting time:  18.9
@@ -63,6 +65,7 @@ Completion Time:  149
 |      J       |      77      |     10     |    1     |        72        |     62    |       62      |       149       |
 +--------------+--------------+------------+----------+------------------+-----------+---------------+-----------------+
 
+Time Chart: IDLE IDLE H H H IDLE A A A A A A A A A A K K K K K K T T T T T T L L L L L L L L R R R R C C C C C C C B B B B B N N N N N N F F F F F F I I I I I I I G G G G G M G G G G G Q Q E E E E E D D D S S Q Q Q Q Q J J J J J J O O O O O O O P P P P P P P P P
 Job scheduling order:  ['H', 'A', 'K', 'T', 'L', 'R', 'C', 'B', 'N', 'F', 'I', 'M', 'G', 'E', 'D', 'S', 'Q', 'J', 'O', 'P']
 Avg Turn around time:  11.15
 Avg Waiting time:  5.25
@@ -94,6 +97,7 @@ Completion Time:  121
 |      P       |      91      |     9      |    2     |        30        |     21    |       21      |       121       |
 +--------------+--------------+------------+----------+------------------+-----------+---------------+-----------------+
 
+Time Chart: IDLE IDLE M M M T T T T T T T T T F F C C C F F F F F F O O O O O O O H H H H E E E E E J J J J J J J J A A A A A A A A A A P P P P P P P R R R R R R R K K K K K K K K D B B B B B G G G G G G G D D L L L L D D D D D D D I I I I I I I I I I N N N N N N N N N N Q Q Q Q Q Q Q Q Q Q S S S S S S S S S S
 Job scheduling order:  ['M', 'T', 'C', 'F', 'O', 'H', 'E', 'J', 'A', 'P', 'R', 'K', 'B', 'G', 'L', 'D', 'I', 'N', 'Q', 'S']
 Avg Turn around time:  26.5
 Avg Waiting time:  19.25
@@ -125,6 +129,7 @@ Completion Time:  147
 |      S       |      6       |     10     |    2     |       141        |    131    |      131      |       147       |
 +--------------+--------------+------------+----------+------------------+-----------+---------------+-----------------+
 
+Time Chart: IDLE IDLE P P P P P P P P P P S S S IDLE I I I I I I I I L T T T T T T C C A C C C E E E E N N N N N R R R D D D D R R K K R R R R H H H H H H G G G G G G G G G G F F F F F F M M M M J J J J J J J Q Q Q Q Q Q Q Q O O O O O O O O O O B B B B B B B B B B
 Job scheduling order:  ['P', 'S', 'I', 'L', 'T', 'A', 'C', 'E', 'N', 'D', 'K', 'R', 'H', 'G', 'F', 'M', 'J', 'Q', 'O', 'B']
 Avg Turn around time:  13.25
 Avg Waiting time:  7.3
