@@ -8,6 +8,7 @@ class Job:
         self.burst_time = burst_time
         self.priority = priority
         self.remaining_time = burst_time
+        self.start_time = -1  # Initialize start time to -1
 
 def main():
     size = 20
@@ -41,8 +42,8 @@ def main():
                 job_queue.sort(key=lambda x: (x.remaining_time, -x.priority))
                 job = job_queue[0]
 
-                if job.remaining_time == job.burst_time:
-                    avg_response_time += time - job.arrival_time
+                if job.start_time == -1:  # Check if job has not started yet
+                    job.start_time = time
 
                 time += 1
                 job.remaining_time -= 1
@@ -51,8 +52,9 @@ def main():
                     completed_jobs.append(job.id)
                     avg_turnaround_time += time - job.arrival_time
                     avg_waiting_time += time - job.arrival_time - job.burst_time
+                    avg_response_time += job.start_time - job.arrival_time  # Calculate response time here
                     table.add_row([job.id, job.arrival_time, job.burst_time, job.priority, time - job.arrival_time,
-                                   time - job.arrival_time - job.burst_time, time - job.arrival_time - job.burst_time,
+                                   time - job.arrival_time - job.burst_time, job.start_time - job.arrival_time,
                                    time])
             else:
                 time += 1
