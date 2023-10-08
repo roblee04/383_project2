@@ -8,7 +8,8 @@ class job:
         self.priority = priority
         self.age = 0    # needed for aging
         self.time_on_cpu = 0 # needed for preemptive hpf
-        self.startend = [] # convenient to use to keep track of multiple start end times in preemptive hpf
+        self.start = 0 # convenient to use to keep track of multiple start end times in preemptive hpf
+        self.end = 0
 
 def create_job(jobs, size, seed):
 
