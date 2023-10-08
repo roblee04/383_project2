@@ -1,18 +1,26 @@
 from job import create_job
+from prettytable import PrettyTable
 
-jobs = [0] * 10
-size = 10
-seeds = [42069]
+size = 20
+jobs = [0] * size
+seeds = [139342, 761639, 567317, 292160, 803931]
+total_avg_tat = 0
+total_avg_wt = 0
+total_avg_rt = 0
+total_avg_throughput = 0
+total_avg_completion_time = 0
 for seed in seeds:
     create_job(jobs, size, seed)
-
-    completed_jobs = set()
-    time = 1
+    completed_jobs = list()
+    time = 0
     avg_turn_around_time = 0
     avg_waiting_time = 0
     avg_response_time = 0
+    table = PrettyTable()
+    table.field_names = ["Process Name", "Arrival Time", "Burst Time", "Turn Around Time",
+                         "Wait Time", "Response Time", "Completion Time"]
 
-    while time < 100 and len(completed_jobs) < size:
+    while len(completed_jobs) < size:
         job_queue = []
         for job in jobs:
             if job.arrival_time <= time and job.id not in completed_jobs:
@@ -24,10 +32,31 @@ for seed in seeds:
             avg_response_time += time-job.arrival_time
             time += job.service_time
             avg_turn_around_time += time-job.arrival_time
-            completed_jobs.add(job.id)
+            completed_jobs.append(job.id)
+            table.add_row([job.id, job.arrival_time, job.service_time, time-job.arrival_time,
+                           time-job.arrival_time-job.service_time, time-job.service_time-job.arrival_time, time])
         else:
             time += 1
+    total_avg_tat += avg_turn_around_time/size
+    total_avg_wt += avg_waiting_time/size
+    total_avg_rt += avg_response_time/size
+    total_avg_throughput += time/size
+    total_avg_completion_time += time
+    print("Job scheduling order: ", completed_jobs)
+    print("Avg Turn around time: ", avg_turn_around_time/size)
+    print("Avg Waiting time: ", avg_waiting_time/size)
+    print("Avg Response time: ", avg_response_time/size)
+    print("Throughput: ", time/size)
+    print("Completion Time: ", time)
+    print(table)
+    print()
 
-    print("Avg TAT: ", avg_turn_around_time/10)
-    print("Avg WT: ", avg_waiting_time/10)
-    print("Avg RT: ", avg_response_time/10)
+print("----------------------------------------------------------------------")
+print("Average Statistics for 5 runs")
+print("----------------------------------------------------------------------")
+
+print("Turn around time: ", total_avg_tat/5)
+print("Waiting time: ", total_avg_wt/5)
+print("Response time: ", total_avg_rt/5)
+print("Throughput: ", total_avg_throughput/5)
+print("Completion time: ", total_avg_completion_time/5)
