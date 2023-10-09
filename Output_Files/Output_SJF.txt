@@ -1,8 +1,9 @@
+C:\Python310\python.exe "D:\Big Data\AOS\SJF\sjf.py"
 Job scheduling order:  ['B', 'Q', 'E', 'I', 'G', 'M', 'A', 'C', 'S', 'J', 'D', 'T', 'O', 'N', 'R', 'F', 'H', 'K', 'P', 'L']
 Avg Turn around time:  20.2
 Avg Waiting time:  13.9
 Avg Response time:  13.9
-Throughput:  6.4
+Throughput:  0.15625
 Completion Time:  128
 +--------------+--------------+------------+------------------+-----------+---------------+-----------------+
 | Process Name | Arrival Time | Burst Time | Turn Around Time | Wait Time | Response Time | Completion Time |
@@ -33,7 +34,7 @@ Job scheduling order:  ['H', 'B', 'M', 'F', 'N', 'P', 'E', 'A', 'R', 'Q', 'S', '
 Avg Turn around time:  26.65
 Avg Waiting time:  19.3
 Avg Response time:  19.3
-Throughput:  7.45
+Throughput:  0.1342281879194631
 Completion Time:  149
 +--------------+--------------+------------+------------------+-----------+---------------+-----------------+
 | Process Name | Arrival Time | Burst Time | Turn Around Time | Wait Time | Response Time | Completion Time |
@@ -64,7 +65,7 @@ Job scheduling order:  ['H', 'A', 'K', 'T', 'L', 'R', 'C', 'B', 'N', 'F', 'I', '
 Avg Turn around time:  11.35
 Avg Waiting time:  5.45
 Avg Response time:  5.45
-Throughput:  6.05
+Throughput:  0.1652892561983471
 Completion Time:  121
 +--------------+--------------+------------+------------------+-----------+---------------+-----------------+
 | Process Name | Arrival Time | Burst Time | Turn Around Time | Wait Time | Response Time | Completion Time |
@@ -95,7 +96,7 @@ Job scheduling order:  ['M', 'T', 'F', 'C', 'O', 'H', 'E', 'J', 'A', 'P', 'R', '
 Avg Turn around time:  26.95
 Avg Waiting time:  19.7
 Avg Response time:  19.7
-Throughput:  7.35
+Throughput:  0.1360544217687075
 Completion Time:  147
 +--------------+--------------+------------+------------------+-----------+---------------+-----------------+
 | Process Name | Arrival Time | Burst Time | Turn Around Time | Wait Time | Response Time | Completion Time |
@@ -126,7 +127,7 @@ Job scheduling order:  ['P', 'S', 'I', 'L', 'T', 'C', 'A', 'E', 'N', 'R', 'K', '
 Avg Turn around time:  13.45
 Avg Waiting time:  7.5
 Avg Response time:  7.5
-Throughput:  6.1
+Throughput:  0.16393442622950818
 Completion Time:  122
 +--------------+--------------+------------+------------------+-----------+---------------+-----------------+
 | Process Name | Arrival Time | Burst Time | Turn Around Time | Wait Time | Response Time | Completion Time |
@@ -159,5 +160,7 @@ Average Statistics for 5 runs
 Turn around time:  19.72
 Waiting time:  13.170000000000002
 Response time:  13.170000000000002
-Throughput:  6.67
+Throughput:  0.15115125842320518
 Completion time:  133.4
+
+Process finished with exit code 0
