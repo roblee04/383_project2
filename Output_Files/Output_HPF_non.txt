@@ -1,0 +1,185 @@
+
+SEED: 139342
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   B |   2 |   12 |   1 |
+   Q |   12 |   16 |   1 |
+   P |   16 |   25 |   2 |
+   E |   25 |   32 |   2 |
+   I |   32 |   41 |   4 |
+   A |   41 |   46 |   1 |
+   G |   46 |   55 |   3 |
+   M |   55 |   58 |   2 |
+   C |   58 |   63 |   1 |
+   J |   63 |   69 |   2 |
+   S |   69 |   74 |   4 |
+   O |   74 |   81 |   3 |
+   D |   81 |   86 |   3 |
+   L |   86 |   96 |   1 |
+   T |   96 |   102 |   3 |
+   R |   102 |   108 |   2 |
+   N |   108 |   117 |   3 |
+   H |   117 |   121 |   3 |
+   K |   121 |   125 |   3 |
+   F |   125 |   128 |   4 |
+total jobs: 20
+
+TIME CHART: 
+BBBBBBBBBBQQQQPPPPPPPPPEEEEEEEIIIIIIIIIAAAAAGGGGGGGGGMMMCCCCCJJJJJJSSSSSOOOOOOODDDDDLLLLLLLLLLTTTTTTRRRRRRNNNNNNNNNHHHHKKKKFFF
+total cpu time used: 126
+
+STATISTICS: 
+Average turnaround time: 24.2
+Average waiting time: 17.9
+Average response time: 17.9
+
+Throughput (jobs completed in 99 time slices): 14
+_________________________________________________
+
+SEED: 761639
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   H |   2 |   7 |   2 |
+   B |   7 |   12 |   2 |
+   N |   12 |   21 |   4 |
+   M |   21 |   28 |   3 |
+   F |   28 |   31 |   3 |
+   S |   31 |   40 |   1 |
+   P |   40 |   49 |   4 |
+   G |   49 |   59 |   1 |
+   A |   59 |   67 |   2 |
+   E |   67 |   75 |   4 |
+   R |   75 |   77 |   2 |
+   T |   77 |   86 |   2 |
+   C |   86 |   96 |   2 |
+   Q |   96 |   105 |   2 |
+   O |   105 |   115 |   2 |
+   J |   115 |   125 |   1 |
+   D |   125 |   131 |   2 |
+   K |   131 |   139 |   2 |
+   L |   139 |   142 |   3 |
+   I |   142 |   149 |   3 |
+total jobs: 20
+
+TIME CHART: 
+HHHHHBBBBBNNNNNNNNNMMMMMMMFFFSSSSSSSSSPPPPPPPPPGGGGGGGGGGAAAAAAAAEEEEEEEERRTTTTTTTTTCCCCCCCCCCQQQQQQQQQOOOOOOOOOOJJJJJJJJJJDDDDDDKKKKKKKKLLLIIIIIII
+total cpu time used: 147
+
+STATISTICS: 
+Average turnaround time: 31.1
+Average waiting time: 23.75
+Average response time: 23.75
+
+Throughput (jobs completed in 99 time slices): 13
+_________________________________________________
+
+SEED: 567317
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   H |   2 |   5 |   2 |
+   A |   6 |   16 |   1 |
+   K |   16 |   22 |   2 |
+   T |   22 |   28 |   4 |
+   L |   28 |   36 |   2 |
+   R |   36 |   40 |   1 |
+   C |   40 |   47 |   2 |
+   B |   47 |   52 |   4 |
+   N |   52 |   58 |   4 |
+   I |   58 |   65 |   2 |
+   F |   65 |   71 |   4 |
+   G |   71 |   81 |   2 |
+   M |   81 |   82 |   4 |
+   Q |   82 |   89 |   4 |
+   J |   89 |   95 |   3 |
+   S |   95 |   97 |   1 |
+   P |   97 |   106 |   2 |
+   O |   106 |   113 |   1 |
+   E |   113 |   118 |   4 |
+   D |   118 |   121 |   4 |
+total jobs: 20
+
+TIME CHART: 
+HHHAAAAAAAAAAKKKKKKTTTTTTLLLLLLLLRRRRCCCCCCCBBBBBNNNNNNIIIIIIIFFFFFFGGGGGGGGGGMQQQQQQQJJJJJJSSPPPPPPPPPOOOOOOOEEEEEDDD
+total cpu time used: 118
+
+STATISTICS: 
+Average turnaround time: 12.75
+Average waiting time: 6.85
+Average response time: 6.85
+
+Throughput (jobs completed in 99 time slices): 16
+_________________________________________________
+
+SEED: 292160
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   T |   2 |   11 |   2 |
+   S |   11 |   21 |   2 |
+   M |   21 |   24 |   3 |
+   C |   24 |   27 |   1 |
+   F |   27 |   35 |   3 |
+   J |   35 |   43 |   2 |
+   H |   43 |   47 |   3 |
+   O |   47 |   54 |   4 |
+   Q |   54 |   64 |   2 |
+   E |   64 |   69 |   4 |
+   A |   69 |   79 |   3 |
+   I |   79 |   89 |   2 |
+   R |   89 |   96 |   1 |
+   P |   96 |   103 |   3 |
+   N |   103 |   113 |   2 |
+   K |   113 |   121 |   4 |
+   D |   121 |   131 |   3 |
+   B |   131 |   136 |   4 |
+   G |   136 |   143 |   3 |
+   L |   143 |   147 |   4 |
+total jobs: 20
+
+TIME CHART: 
+TTTTTTTTTSSSSSSSSSSMMMCCCFFFFFFFFJJJJJJJJHHHHOOOOOOOQQQQQQQQQQEEEEEAAAAAAAAAAIIIIIIIIIIRRRRRRRPPPPPPPNNNNNNNNNNKKKKKKKKDDDDDDDDDDBBBBBGGGGGGGLLLL
+total cpu time used: 145
+
+STATISTICS: 
+Average turnaround time: 33.35
+Average waiting time: 26.1
+Average response time: 26.1
+
+Throughput (jobs completed in 99 time slices): 13
+_________________________________________________
+
+SEED: 803931
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   P |   2 |   12 |   1 |
+   S |   12 |   15 |   2 |
+   I |   16 |   24 |   1 |
+   L |   24 |   25 |   3 |
+   T |   25 |   31 |   4 |
+   C |   31 |   36 |   3 |
+   A |   36 |   37 |   2 |
+   E |   37 |   41 |   2 |
+   R |   41 |   50 |   1 |
+   N |   50 |   55 |   4 |
+   D |   55 |   59 |   2 |
+   K |   59 |   61 |   1 |
+   G |   61 |   71 |   4 |
+   H |   71 |   77 |   2 |
+   O |   77 |   87 |   4 |
+   F |   87 |   93 |   4 |
+   Q |   93 |   101 |   3 |
+   M |   101 |   105 |   3 |
+   J |   105 |   112 |   3 |
+   B |   112 |   122 |   3 |
+total jobs: 20
+
+TIME CHART: 
+PPPPPPPPPPSSSIIIIIIIILTTTTTTCCCCCAEEEERRRRRRRRRNNNNNDDDDKKGGGGGGGGGGHHHHHHOOOOOOOOOOFFFFFFQQQQQQQQMMMMJJJJJJJBBBBBBBBBB
+total cpu time used: 119
+
+STATISTICS: 
+Average turnaround time: 14.95
+Average waiting time: 9.0
+Average response time: 9.0
+
+Throughput (jobs completed in 99 time slices): 16
+_________________________________________________

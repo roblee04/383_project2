@@ -40,13 +40,13 @@ for seed in seeds:
     total_avg_tat += avg_turn_around_time/size
     total_avg_wt += avg_waiting_time/size
     total_avg_rt += avg_response_time/size
-    total_avg_throughput += time/size
+    total_avg_throughput += size/time
     total_avg_completion_time += time
     print("Job scheduling order: ", completed_jobs)
     print("Avg Turn around time: ", avg_turn_around_time/size)
     print("Avg Waiting time: ", avg_waiting_time/size)
     print("Avg Response time: ", avg_response_time/size)
-    print("Throughput: ", time/size)
+    print("Throughput: ", size/time)
     print("Completion Time: ", time)
     print(table)
     print()

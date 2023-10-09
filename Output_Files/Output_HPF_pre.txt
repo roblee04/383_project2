@@ -1,0 +1,185 @@
+
+SEED: 139342
+
+TIMECHART: 
+BBBBBBBBBBQPPPPPPPPPEEEEEEEQQQIIIIIIIIIGGGGGGGGGAAAAAMMMSSSSSCCCCCJJJJJJOOOOOOODDDDDTTTTTTLLLLLLLLLLNNNNNNNNNRRRRRRHHHHKKKKFFF
+
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   B |   2 |   11 |   1 |
+   P |   13 |   21 |   2 |
+   E |   22 |   28 |   2 |
+   Q |   12 |   31 |   1 |
+   I |   32 |   40 |   4 |
+   G |   41 |   49 |   3 |
+   A |   50 |   54 |   1 |
+   M |   55 |   57 |   2 |
+   S |   58 |   62 |   4 |
+   C |   63 |   67 |   1 |
+   J |   68 |   73 |   2 |
+   O |   74 |   80 |   3 |
+   D |   81 |   85 |   3 |
+   T |   86 |   91 |   3 |
+   L |   92 |   101 |   1 |
+   N |   102 |   110 |   3 |
+   R |   111 |   116 |   2 |
+   H |   117 |   120 |   3 |
+   K |   121 |   124 |   3 |
+   F |   125 |   127 |   4 |
+total jobs: 20
+
+STATISTICS: 
+Average turnaround time: 23.8
+Average waiting time: 17.5
+Average response time: 17.7
+
+Throughput (jobs completed in 99 time slices): 14
+_________________________________________________
+
+SEED: 761639
+
+TIMECHART: 
+HHHHHBBBBBNNNNNNNNNMMMMMFMMFFSSPPPPPPPPPSSSSSSSEEEEEEEEGGGGGGGGGGAAAAAAAARRTTTTTTTTTQQQQQQQQQCCCCCCCCCCOOOOOOOOOOJJJJJJJJJJDDDDDDLLLKKKKKKKKIIIIIII
+
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   H |   2 |   6 |   2 |
+   B |   7 |   11 |   2 |
+   N |   12 |   20 |   4 |
+   M |   21 |   28 |   3 |
+   F |   26 |   30 |   3 |
+   P |   33 |   41 |   4 |
+   S |   31 |   48 |   1 |
+   E |   49 |   56 |   4 |
+   G |   57 |   66 |   1 |
+   A |   67 |   74 |   2 |
+   R |   75 |   76 |   2 |
+   T |   77 |   85 |   2 |
+   Q |   86 |   94 |   2 |
+   C |   95 |   104 |   2 |
+   O |   105 |   114 |   2 |
+   J |   115 |   124 |   1 |
+   D |   125 |   130 |   2 |
+   L |   131 |   133 |   3 |
+   K |   134 |   141 |   2 |
+   I |   142 |   148 |   3 |
+total jobs: 20
+
+STATISTICS: 
+Average turnaround time: 29.85
+Average waiting time: 22.5
+Average response time: 22.9
+
+Throughput (jobs completed in 99 time slices): 13
+_________________________________________________
+
+SEED: 567317
+
+TIMECHART: 
+HHHAAAAAAAAAAKKKKKKTTTTTLLLLLRRRRTLLLCCCCCCCBBBBNNBNNIIIINNIIFFFIFFGGGGFGGGGGGMQQQJJQQQSSJJJQPPPPJEEEEEDDDPPPPPOOOOOOO
+
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   H |   2 |   4 |   2 |
+   A |   6 |   15 |   1 |
+   K |   16 |   21 |   2 |
+   R |   32 |   35 |   1 |
+   T |   22 |   36 |   4 |
+   L |   27 |   39 |   2 |
+   C |   40 |   46 |   2 |
+   B |   47 |   53 |   4 |
+   N |   51 |   61 |   4 |
+   I |   56 |   67 |   2 |
+   F |   64 |   74 |   4 |
+   G |   70 |   80 |   2 |
+   M |   81 |   81 |   4 |
+   S |   90 |   91 |   1 |
+   Q |   82 |   95 |   4 |
+   J |   85 |   100 |   3 |
+   E |   101 |   105 |   4 |
+   D |   106 |   108 |   4 |
+   P |   96 |   113 |   2 |
+   O |   114 |   120 |   1 |
+total jobs: 20
+
+STATISTICS: 
+Average turnaround time: 12.85
+Average waiting time: 6.95
+Average response time: 5.05
+
+Throughput (jobs completed in 99 time slices): 15
+_________________________________________________
+
+SEED: 292160
+
+TIMECHART: 
+TTTTTTTTTSMMMSSSSSSSSSFFFFFFFFCCCJJJJJJJJOOOOOOOHHHHEEEEEQQQQQQQQQQAAAAAAAAAAIIIIIIIIIIPPPPPPPRRRRRRRKKKKKKKKNNNNNNNNNNDDDDDDDDDDBBBBBGGGGGGGLLLL
+
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   T |   2 |   10 |   2 |
+   M |   12 |   14 |   3 |
+   S |   11 |   23 |   2 |
+   F |   24 |   31 |   3 |
+   C |   32 |   34 |   1 |
+   J |   35 |   42 |   2 |
+   O |   43 |   49 |   4 |
+   H |   50 |   53 |   3 |
+   E |   54 |   58 |   4 |
+   Q |   59 |   68 |   2 |
+   A |   69 |   78 |   3 |
+   I |   79 |   88 |   2 |
+   P |   89 |   95 |   3 |
+   R |   96 |   102 |   1 |
+   K |   103 |   110 |   4 |
+   N |   111 |   120 |   2 |
+   D |   121 |   130 |   3 |
+   B |   131 |   135 |   4 |
+   G |   136 |   142 |   3 |
+   L |   143 |   146 |   4 |
+total jobs: 20
+
+STATISTICS: 
+Average turnaround time: 32.1
+Average waiting time: 24.85
+Average response time: 25.7
+
+Throughput (jobs completed in 99 time slices): 13
+_________________________________________________
+
+SEED: 803931
+
+TIMECHART: 
+PPPPPPPPPPSSSIIIIIIIILTCCCCTTTAECEETRRERRTRRRRNNNNNRDDDGGGGGGGGGGDKKHHHHHHOOOOOOOOOOFFFFFFQQQQQQQQMMMMJJJJJJJBBBBBBBBBB
+
+PROCESS INFORMATION:
+pid: |arr:  |run: |prio: 
+   P |   2 |   11 |   1 |
+   S |   12 |   14 |   2 |
+   I |   16 |   23 |   1 |
+   L |   24 |   24 |   3 |
+   A |   33 |   33 |   2 |
+   C |   26 |   35 |   3 |
+   E |   34 |   41 |   2 |
+   T |   25 |   44 |   4 |
+   N |   49 |   53 |   4 |
+   R |   39 |   54 |   1 |
+   G |   58 |   67 |   4 |
+   D |   55 |   68 |   2 |
+   K |   69 |   70 |   1 |
+   H |   71 |   76 |   2 |
+   O |   77 |   86 |   4 |
+   F |   87 |   92 |   4 |
+   Q |   93 |   100 |   3 |
+   M |   101 |   104 |   3 |
+   J |   105 |   111 |   3 |
+   B |   112 |   121 |   3 |
+total jobs: 20
+
+STATISTICS: 
+Average turnaround time: 15.6
+Average waiting time: 9.65
+Average response time: 8.65
+
+Throughput (jobs completed in 99 time slices): 16
+_________________________________________________
