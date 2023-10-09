@@ -1,7 +1,8 @@
 from prettytable import PrettyTable
-from job import create_job, graph
+from job import create_job
+
 print("----------------------------------------------------------------------")
-print("Short Remaining Time Fisrt(SRT) Outputs")
+print("Output For Shortest Time First(SRT) Algorithm")
 print("----------------------------------------------------------------------")
 class Job:
     def __init__(self, id, arrival_time, burst_time, priority):
@@ -37,6 +38,8 @@ def main():
         table.field_names = ["Process Name", "Arrival Time", "Burst Time", "Priority", "Turn Around Time",
                              "Wait Time", "Response Time", "Completion Time"]
 
+        time_chart = []  # List to store the time chart
+
         while len(completed_jobs) < size:
             job_queue = [job for job in job_list if job.arrival_time <= time and job.id not in completed_jobs]
 
@@ -49,6 +52,7 @@ def main():
 
                 time += 1
                 job.remaining_time -= 1
+                time_chart.append(job.id)  # Append the process name to the time chart
 
                 if job.remaining_time == 0:
                     completed_jobs.append(job.id)
@@ -59,6 +63,7 @@ def main():
                                    time - job.arrival_time - job.burst_time, job.start_time - job.arrival_time,
                                    time])
             else:
+                time_chart.append("IDLE")
                 time += 1
 
         total_avg_tat += avg_turnaround_time / size
@@ -67,11 +72,14 @@ def main():
         total_avg_throughput += size / time
         total_avg_completion_time += time
 
+        # Print the time chart
+        print("Time Chart:", " ".join(time_chart))
+
         print("Job scheduling order: ", completed_jobs)
         print("Avg Turn around time: ", avg_turnaround_time / size)
         print("Avg Waiting time: ", avg_waiting_time / size)
         print("Avg Response time: ", avg_response_time / size)
-        print("Throughput: ", size / time , "processes per quantum time")
+        print("Throughput: ", size / time, "processes per quantum time")
         print("Completion Time: ", time)
         print(table)
         print()
@@ -82,7 +90,7 @@ def main():
     print("Turn around time: ", total_avg_tat / 5)
     print("Waiting time: ", total_avg_wt / 5)
     print("Response time: ", total_avg_rt / 5)
-    print("Throughput: ", total_avg_throughput / 5 , "processes per quantum time")
+    print("Throughput: ", total_avg_throughput / 5, "processes per quantum time")
     print("Completion time: ", total_avg_completion_time / 5)
 
 if __name__ == '__main__':
