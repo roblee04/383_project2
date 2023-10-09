@@ -1,76 +1,89 @@
 from prettytable import PrettyTable
-from job import create_job
-
+from job import create_job, graph
+print("----------------------------------------------------------------------")
+print("Short Remaining Time Fisrt(SRT) Outputs")
+print("----------------------------------------------------------------------")
 class Job:
-    def _init_(self, id, arrival_time, service_time, priority):
+    def __init__(self, id, arrival_time, burst_time, priority):
         self.id = id
         self.arrival_time = arrival_time
-        self.service_time = service_time
+        self.burst_time = burst_time
         self.priority = priority
+        self.remaining_time = burst_time
+        self.start_time = -1  # Initialize start time to -1
 
-def srtf_scheduler(jobs):
-    current_time = 0
-    completed_jobs = []
-    avg_turnaround_time = 0
-    avg_waiting_time = 0
-    avg_response_time = 0
-
-    # Create a PrettyTable to store the output table
-    table = PrettyTable()
-    table.field_names = ["Process Name", "Arrival Time", "Start Time", "End Time", "Run Time",
-                         "Response Time", "Wait Time", "Turn Around Time", "Priority"]
-
-    while jobs:
-        runnable_jobs = [job for job in jobs if job.arrival_time <= current_time]
-
-        if runnable_jobs:
-            shortest_job = min(runnable_jobs, key=lambda job: job.service_time)
-            shortest_job.service_time -= 1
-            current_time += 1
-
-            if shortest_job.service_time == 0:
-                jobs.remove(shortest_job)
-                completed_jobs.append(shortest_job)
-
-                # Calculate Run Time, Response Time, Wait Time, and TurnAround Time
-                start_time = current_time - 1
-                end_time = current_time
-
-                response_time = start_time - shortest_job.arrival_time
-                wait_time = response_time - shortest_job.service_time
-                turnaround_time = end_time - shortest_job.arrival_time
-
-                # Add job details to the PrettyTable
-                table.add_row([shortest_job.id, shortest_job.arrival_time, start_time, end_time,
-                               end_time - start_time, response_time, wait_time, turnaround_time, shortest_job.priority])
-
-                # Update averages
-                avg_turnaround_time += turnaround_time
-                avg_waiting_time += wait_time
-                avg_response_time += response_time
-        else:
-            current_time += 1
-
-    print(table)
-
-    return completed_jobs, avg_turnaround_time, avg_waiting_time, avg_response_time
-
-if __name__ == '__main__':
-    # Create jobs using your existing create_job function
+def main():
     size = 20
     jobs = [0] * size
-    seed = 42069
+    seeds = [139342, 761639, 567317, 292160, 803931]
+    total_avg_tat = 0
+    total_avg_wt = 0
+    total_avg_rt = 0
+    total_avg_throughput = 0
+    total_avg_completion_time = 0
 
-    create_job(jobs, size, seed)
+    for seed in seeds:
+        create_job(jobs, size, seed)
 
-    # Sort jobs by arrival time and priority for SRTF
-    jobs.sort(key=lambda job: (job.arrival_time, job.priority))
+        # Convert job objects to the Job class used in this code
+        job_list = [Job(j.id, j.arrival_time, j.service_time, j.priority) for j in jobs]
 
-    completed_jobs, avg_turnaround_time, avg_waiting_time, avg_response_time = srtf_scheduler(jobs)
+        time = 0
+        completed_jobs = []
+        avg_turnaround_time = 0
+        avg_waiting_time = 0
+        avg_response_time = 0
+        table = PrettyTable()
+        table.field_names = ["Process Name", "Arrival Time", "Burst Time", "Priority", "Turn Around Time",
+                             "Wait Time", "Response Time", "Completion Time"]
 
-    for job in completed_jobs:
-        print(f"Job {job.id} completed.")
+        while len(completed_jobs) < size:
+            job_queue = [job for job in job_list if job.arrival_time <= time and job.id not in completed_jobs]
 
-    print("Avg TRT:", avg_turnaround_time / size)
-    print("Avg WT:", avg_waiting_time / size)
-    print("Avg RT:", avg_response_time / size)
+            if job_queue:
+                job_queue.sort(key=lambda x: (x.remaining_time, -x.priority))
+                job = job_queue[0]
+
+                if job.start_time == -1:  # Check if job has not started yet
+                    job.start_time = time
+
+                time += 1
+                job.remaining_time -= 1
+
+                if job.remaining_time == 0:
+                    completed_jobs.append(job.id)
+                    avg_turnaround_time += time - job.arrival_time
+                    avg_waiting_time += time - job.arrival_time - job.burst_time
+                    avg_response_time += job.start_time - job.arrival_time  # Calculate response time here
+                    table.add_row([job.id, job.arrival_time, job.burst_time, job.priority, time - job.arrival_time,
+                                   time - job.arrival_time - job.burst_time, job.start_time - job.arrival_time,
+                                   time])
+            else:
+                time += 1
+
+        total_avg_tat += avg_turnaround_time / size
+        total_avg_wt += avg_waiting_time / size
+        total_avg_rt += avg_response_time / size
+        total_avg_throughput += size / time
+        total_avg_completion_time += time
+
+        print("Job scheduling order: ", completed_jobs)
+        print("Avg Turn around time: ", avg_turnaround_time / size)
+        print("Avg Waiting time: ", avg_waiting_time / size)
+        print("Avg Response time: ", avg_response_time / size)
+        print("Throughput: ", size / time , "processes per quantum time")
+        print("Completion Time: ", time)
+        print(table)
+        print()
+
+    print("----------------------------------------------------------------------")
+    print("Average Statistics for 5 runs")
+    print("----------------------------------------------------------------------")
+    print("Turn around time: ", total_avg_tat / 5)
+    print("Waiting time: ", total_avg_wt / 5)
+    print("Response time: ", total_avg_rt / 5)
+    print("Throughput: ", total_avg_throughput / 5 , "processes per quantum time")
+    print("Completion time: ", total_avg_completion_time / 5)
+
+if __name__ == '__main__':
+    main()

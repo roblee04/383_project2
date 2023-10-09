@@ -6,7 +6,11 @@ class job:
         self.arrival_time = arrival_time
         self.service_time = service_time
         self.priority = priority
-        self.next = None # omit this if not using LL
+        self.age = 0    # needed for aging
+        self.og_prio = priority # convenient for keeping track of original priority, hpf aging
+        self.time_on_cpu = 0 # needed for preemptive hpf
+        self.start = 0 # convenient to use to keep track of multiple start end times in preemptive hpf
+        self.end = 0
 
 def create_job(jobs, size, seed):
 
