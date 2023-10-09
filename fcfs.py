@@ -1,4 +1,5 @@
 from job import create_job, graph
+import matplotlib.pyplot as plt
 
 def fcfs_scheduling(jobs):
     time = 0  # Current time
@@ -39,6 +40,9 @@ def main():
         # Perform FCFS scheduling
         completed_jobs = fcfs_scheduling(jobs)
 
+        # Sort the completed jobs by arrival time
+        completed_jobs.sort(key=lambda job: job.arrival_time)
+
         # Calculate the total time it took for all processes to complete
         total_completion_time = max(job.completion_time for job in completed_jobs)
 
@@ -59,7 +63,7 @@ def main():
         avg_response_time = total_response_time / size
 
         throughput = size/total_completion_time
-
+        
         print("\nStatistics:")
         print(f"Average Turnaround Time: {avg_turnaround_time}")
         print(f"Average Waiting Time: {avg_waiting_time}")
@@ -71,17 +75,17 @@ def main():
         total_avg_response_time += avg_response_time
         total_throughput += throughput
 
+        # graph(completed_jobs)
     
     # --------------- Print avg statistics of 5 runs ----------------
-
-    print("\nAverage Statistics of 5 runs :")
+    print("\n-----------------------------------------------------------")
+    print("Average Statistics of 5 runs :")
     print(f"Average Turnaround Time: {total_avg_turnaround_time/5}")
     print(f"Average Waiting Time: {total_avg_waiting_time/5}")
     print(f"Average Response Time: {total_avg_response_time/5}")
     print(f"Throughput: {total_throughput/5} processes per quantum")  
+    print("-----------------------------------------------------------")
 
-
-
-
+    
 if __name__ == '__main__':
     main()
