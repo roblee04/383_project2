@@ -1,6 +1,11 @@
 from job import create_job
 from prettytable import PrettyTable
 
+# need prettytable module, set up virtual env and pip install
+# $ python3 -m venv .venv
+# $ source .venv/bin/activate
+# $ pip install -U prettytable
+
 size = 20
 jobs = [0] * size
 seeds = [139342, 761639, 567317, 292160, 803931]

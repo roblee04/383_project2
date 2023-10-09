@@ -1,6 +1,14 @@
 from job import create_job, graph
 import matplotlib.pyplot as plt
 
+# first come first serve
+
+# need matplotlib module, set up virtual env and pip install
+# $ python3 -m venv .venv
+# $ source .venv/bin/activate
+# $ pip install -U matplotlib
+
+
 def fcfs_scheduling(jobs):
     time = 0  # Current time
     completed_jobs = []  # List to store completed jobs

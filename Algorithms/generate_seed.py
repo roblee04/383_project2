@@ -2,6 +2,18 @@ import random
 import time
 from job import *
 
+# generate_seed.py is used to generate x amount of seeds for jobs
+
+# logic:
+# generate jobs and put into interval form --> [arrival time, arrival time + service time]
+# check the FREE intervals of cpu time aka times not taken by jobs intervals, 
+# make sure that they are all less than 2 quanta
+
+# you can also graphically see this by calling graph() method, it is also a sanity check
+
+# repeat until you want to find x amount of seeds
+# you can also change the number of jobs per seed, recommended >= 20 jobs
+
 # find a job seq so cpu not idle for more than 2 consecutive quanta
 def findFreeinterval(arr, N):
     if N < 1:
