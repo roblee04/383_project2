@@ -1,86 +1,114 @@
-from job import create_job, graph
+from job import *
 from collections import deque
 
-# Parameters
-l = [139342, 761639, 567317, 292160, 803931]
-quantum = 1
+def output(lst):
+    # Each created process’s name (such as A, B, C, ...), arrival time, expected runtime, and priority.
+    print("PROCESS INFORMATION:")
+    print("pid: |" + "arr:  |" + "end: |" + "prio: ")
 
-for s in l:
-    size = 20
-    jobs = [0] * size
-    seed = s
+    for j in lst:
+        b = ""
+        b += "   " + j.id + " |"
+        b += "   " + str(j.start) + " |"
+        b += "   " + str(j.end) + " |"
+        b += "   " + str(j.priority) + " |"
+        
+        print(b)  
+    print("Total Jobs Run: " + str(len(lst)))
+    print()
 
-    create_job(jobs, size, seed)
+    # Statistics
+    count = 0
+    tot_tat = 0
+    tot_wait = 0
+    tot_res = 0
+
+    for j in lst: 
+        # Average turnaround time, Turnaround Time = Completion Time – Arrival Time
+        tat = j.end - j.arrival_time
+        # Average waiting time, Waiting Time = TAT - Service Time
+        wait = tat - j.service_time
+        # Average response time, Response Time = Run Time – Arrival Time
+        res = j.start - j.arrival_time
+
+        tot_tat += tat
+        tot_wait += wait
+        tot_res += res
+        count += 1
     
-    # Graphing and Printing job details
-    graph(jobs)
+    print("STATISTICS: ")
+    print("Average turnaround time: " + str(round(tot_tat / count, 2)))
+    print("Average waiting time: " + str(round(tot_wait / count, 2)))
+    print("Average response time: " + str(round(tot_res / count, 2)))
+    # Throughput = Jobs Completed / Total Time Ran 
+    print("Throughput: " + str(round((count / lst[-1].end), 2)))
 
-    for job in jobs:
-        print(f"ID: {job.id}, Arrival Time: {job.arrival_time}, Service Time: {job.service_time}, Priority: {job.priority}")
-
-    # Initialize time & job variables
-    time = 0
-    avg_turnaround_time = 0
-    avg_response_time = 0
-    avg_wait_time = 0  
-
+def rr(jobs):
+    time = 0    # global time
+    tc = ""     # time chart
     job_queue = deque()
-    started_jobs = set()
     completed_jobs = []
 
     # Sort jobs by arrival time
     jobs.sort(key=lambda x: x.arrival_time)
 
-    # Perform Round Robin scheduling
-    print("Simulation Start:")
-    while jobs or job_queue:
-        print(f"Time: {time}")
+    # print("Simulation Start:")
+    while time <= 99 or job_queue:
+        # print(f"Time: {time}")
         # Add jobs to the queue when their arrival time has been reached
-        while jobs and jobs[0].arrival_time <= time:
-            print(f"Job {jobs[0].id} arrived at {time}")
+        while time <= 99 and jobs and jobs[0].arrival_time == time:
+            # print(f"Job {jobs[0].id} arrived at {time}")
             job_queue.append(jobs.pop(0))
 
         if not job_queue:
             # No jobs are ready, so we can't proceed.
-            time += quantum
+            time += 1
+            tc += '-'
             continue
 
-        current_job = job_queue.popleft()
+        curr_job = job_queue.popleft()
 
-        # Track response time
-        if current_job not in started_jobs:
-            started_jobs.add(current_job)
-            avg_response_time += time - current_job.arrival_time  
+        # Track start time
+        if curr_job.time_on_cpu == 0:
+            # print(f"Job {curr_job.id} arrived at {time}")
+            curr_job.start = time
+            # Make sure no jobs start running after time = 99
+            if time > 99:
+                while job_queue and curr_job.time_on_cpu == 0:
+                    curr_job = job_queue.popleft()
+            # If final job hasn't started yet, will execute if statement below
+            if curr_job.start > 99:
+                break
+            # print(f"Job {curr_job.id} arrived at {time}")
+                  
+        curr_job.time_on_cpu += 1
+        tc += curr_job.id
 
-        if current_job.service_time > quantum:
-            print(f"Job {current_job.id} worked for {quantum}")
-            time += quantum
-            avg_wait_time += quantum * len(job_queue)
-            current_job.service_time -= quantum          
-            job_queue.append(current_job)
-        else:
-            print(f"Job {current_job.id} completed!")
-            time += current_job.service_time
-            avg_wait_time += current_job.service_time * len(job_queue)
-            current_job.service_time = 0
-            completed_jobs.append((current_job, time))
+        if curr_job.time_on_cpu == curr_job.service_time:  
+            # Check if the job's start time is within the time limit
+            # print(f"Job {curr_job.id} completed at {time}")
+            curr_job.end = time
+            completed_jobs.append(curr_job)
+        else:   
+            job_queue.append(curr_job)
+        
+        time += 1
+    
+    print("TIMECHART: \n" + tc + "\n")
+    output(completed_jobs)
 
-    # Print each job completion times in order and add them to the overall turnaround time
-    for job, completion_time in completed_jobs:
-        print(f"Job {job.id} completed at time {completion_time}")
-        avg_turnaround_time += completion_time - job.arrival_time
 
-    # Calculate and print average turnaround time, average waiting time, and average response time
-    num_jobs = len(completed_jobs)
-    print(f"Number of jobs = {num_jobs}")   
-    avg_turnaround_time /= num_jobs
-    avg_response_time /= num_jobs
-    avg_wait_time /= num_jobs
+seeds = [139342, 761639, 567317, 292160, 803931]
 
-    print(f"Average Turnaround Time: {avg_turnaround_time:.2f}")
-    print(f"Average Response Time: {avg_response_time:.2f}")
-    print(f"Average Wait Time: {avg_wait_time:.2f}")
+for s in seeds:
+    size = 20
+    jobs = [0] * size
+    seed = s
 
-    # Calculate and print throughput
-    throughput = len(completed_jobs)/time
-    print(f"Throughput: {throughput:.2f} jobs per quantum\n")
+    create_job(jobs, size, seed)
+
+    print()
+    print("SEED: " + str(seed) + "\n")
+    rr(jobs)
+
+    print("_________________________________________________")
